@@ -8,18 +8,19 @@
     <link rel="shortcut icon" type="image/png" href="/icon.png" />
 
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
 
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
     <title>Mapty - Map your workouts</title>
-    <link rel="shortcut icon" href="./images/icon.png">
+    <link rel="shortcut icon" href="./images/icon.png" />
 </head>
 
 <body>
-
     <div class="container wrapper">
-        <div class=" row col-12 rowWrap">
+        <div class="row col-12 rowWrap">
             <div class="col-lg-4 sidebar">
                 <img src="./images/logo.png" alt="Logo" class="logo" />
                 <!-- <ul class="workouts">
@@ -103,30 +104,21 @@
                     &copy; Copyright by
                     <a class="github-link" target="_blank" href="https://github.com/shuvo18103107">Mohammad Ali
                         Shuvo</a>.
-
                 </p>
-
-
             </div>
-            <div class="col-lg-8" id="map">
-
-            </div>
-
-
+            <div class="col-lg-8" id="map"></div>
         </div>
-
     </div>
-
-
-
-
-
 </body>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- leaflet API -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 <script src="script.js"></script>
 
 </html>
