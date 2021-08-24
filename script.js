@@ -11,7 +11,7 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 
-//geolocation api
+//geolocation api and leaflet api implementation
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
         //1st callback is success when browser get the coordinate,2nd cllback is the error confirmation
@@ -26,16 +26,38 @@ if (navigator.geolocation) {
             //here map is the id name where we want to show our map
             const coord = [latitude, longitude];
             const map = L.map('map').setView(coord, 13);
-
+            // console.log(map);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution:
                     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             }).addTo(map);
 
-            L.marker(coord)
-                .addTo(map)
-                .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-                .openPopup();
+
+
+            //displaying a map marker
+            //on method is not come from js , it came from leaflet api
+            //here we use on method basically to add an eventlistner
+            map.on('click', function (mapEvent) {
+                // console.log(mapEvent); //this event gives us a object inside it we get lat and long now add marker via this
+                //adding marker 
+                const { lat, lng } = mapEvent.latlng
+                L.marker([lat, lng])
+                    .addTo(map)
+                    .bindPopup(L.popup({
+                        //define size of the pop up
+                        maxWidth: 250,
+                        minWidth: 100,
+                        //auto close when another place on map we click so make it false
+                        autoClose: false,
+                        //when click on cross on the pop up it disappera make it false
+                        closeOnClick: false,
+                        //we can assign any css classname on the popup
+                        className: 'running-popup'
+                    }))
+                    .setPopupContent('welcome shuvo')
+                    .openPopup();
+
+            })
         },
 
         //error call back
@@ -44,3 +66,4 @@ if (navigator.geolocation) {
         }
     );
 }
+
