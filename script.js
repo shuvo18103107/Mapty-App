@@ -11,6 +11,50 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 
+class Workout {
+    date = new Date();
+    //each object should have a unique id
+    id = (Date.now() + '').slice(-10);
+    //data that common on both cycling and running
+    constructor(coords, distance, duration) {
+        this.coords = coords; // [lat,lng]
+        this.distance = distance; //in km
+        this.duration = duration; //in minute
+    }
+}
+class Running extends Workout {
+    constructor(coord, distance, duration, cadence) {
+        super(coord, distance, duration);
+        this.cadence = cadence;
+        this.calcPace();
+    }
+    calcPace() {
+        //min/km
+        this.pace = this.duration / this.distance;
+        return this.pace;
+    }
+}
+class Cycling extends Workout {
+    constructor(coord, distance, duration, elevationGain) {
+        super(coord, distance, duration);
+        this.elevationGain = elevationGain;
+        this.calcSpeed();
+    }
+    calcSpeed() {
+        //km/h
+        this.speed = this.distance / (this.duration / 60);
+        return this.speed;
+    }
+}
+
+// const run1 = new Running([39, -12], 5.2, 24, 173);
+// const cycling1 = new Cycling([39, -12], 27, 95, 573);
+
+// console.log(run1);
+// console.log(cycling1);
+
+/////////////////////////////////////////////////////////////
+//Application Architecture
 class App {
     //private property that belong all instances
     #map;
@@ -31,7 +75,7 @@ class App {
                 //1st callback is success when browser get the coordinate,2nd cllback is the error confirmation
                 //success call back, it is a function call noth method call, this is called by getcurrentposition not object method call, we know in reg func call this is undefined
                 // this._loadMap, //, it will e undefined cg js call this callback function and pass position argument, so method call is not work here , solution is we can bind this method and we know bind return a regular function
-                this._loadMap.bind(this),
+                this._loadMap.bind(this), //not method call function call so bind it so that it can be a function call
                 //error call back
                 function () {
                     alert('Could not get your position');
@@ -44,7 +88,7 @@ class App {
         const { latitude } = position.coords;
         const { longitude } = position.coords;
         // console.log(latitude, longitude);
-        console.log(`https://www.google.com/maps/@${latitude},${longitude}`);
+        // console.log(`https://www.google.com/maps/@${latitude},${longitude}`); //get my current cooordinates
         //leaflet API implemtation code
         //here map is the id name where we want to show our map
         const coord = [latitude, longitude];
@@ -108,4 +152,4 @@ class App {
 }
 
 const app = new App(); //when object create from a class constructor function is called each time
-console.log(app);
+// console.log(app);
