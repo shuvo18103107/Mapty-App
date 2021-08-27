@@ -125,13 +125,13 @@ a:visited {
   padding: 1.5rem 2.75rem;
   margin-bottom: 1.75rem;
 
-  display: grid;
+  display: grid !important;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem 2.5rem;
 
   /* Match height and activity boxes */
   height: 9.25rem;
-  /* BUG transition not woking */
+
   transition: all 0.5s, transform 1ms !important;
 }
 

@@ -1,6 +1,7 @@
 'use strict';
 
 class Workout {
+    //parent class so other class extend korle er property oi class eow thakbe
     date = new Date();
     //each object should have a unique id
     id = (Date.now() + '').slice(-10);
@@ -9,20 +10,43 @@ class Workout {
         this.coords = coords; // [lat,lng]
         this.distance = distance; //in km
         this.duration = duration; //in minute
+
+    }
+    _setDescription() {
+        //prettier-ignore
+        const months = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December',
+        ];
+        this.description = `${this.type[0].toUpperCase()}${this.type.slice(1)} on ${months[this.date.getMonth()]} ${this.date.getDate()}`
+
     }
 }
+
 class Running extends Workout {
     type = 'running';
     constructor(coord, distance, duration, cadence) {
         super(coord, distance, duration);
         this.cadence = cadence;
         this.calcPace();
+        this._setDescription()
     }
     calcPace() {
         //min/km
         this.pace = this.duration / this.distance;
         return this.pace;
     }
+
 }
 class Cycling extends Workout {
     type = 'cycling';
@@ -30,6 +54,7 @@ class Cycling extends Workout {
         super(coord, distance, duration);
         this.elevationGain = elevationGain;
         this.calcSpeed();
+        this._setDescription()
     }
     calcSpeed() {
         //km/h
@@ -46,20 +71,7 @@ class Cycling extends Workout {
 
 /////////////////////////////////////////////////////////////
 //Application Architecture
-const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-];
+
 
 const form = document.querySelector('.form');
 const containerWorkouts = document.querySelector('.workouts');
@@ -132,6 +144,15 @@ class App {
         form.classList.remove('hidden');
         inputDistance.focus();
     }
+    _hideForm() {
+        // Empty inputs
+        inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value =
+            '';
+
+        form.style.display = 'none';
+        form.classList.add('hidden');
+        setTimeout(() => (form.style.display = 'grid'), 1000); //bootstrap er karone prb hocee grid important set korte 
+    }
     //toogle e object er kono property ba method refer er kaj nai so this diye object indicate lagtece na ekhane tai bind kore object specify korar drkr nai
     _toogleElevationField() {
         inputElevation.closest('.form__row').classList.toggle('form__row--hidden');
@@ -183,14 +204,12 @@ class App {
         //render workout on map as marker
         this._renderworkoutMarker(workout);
         //render workout on list
+        this._renderWorkout(workout)
 
         //clear input fields + hide forms
-        inputDistance.value =
-            inputCadence.value =
-            inputDuration.value =
-            inputElevation.value =
-            '';
+        this._hideForm();
     }
+
     _renderworkoutMarker(workout) {
         //get the workout object to set the data into the map from the object
 
@@ -209,12 +228,52 @@ class App {
                     className: `${workout.type}-popup`,
                 })
             )
-            .setPopupContent('workout')
+            .setPopupContent(`${workout.type === 'running' ? '🏃‍♂️' : '🚴‍♀️'} ${workout.description}`)
             .openPopup();
         // Render workout on list
 
         //Hide the form and clear input fields
     }
+    _renderWorkout(workout) {
+        let html = ` <li class="workout workout--${workout.type}" data-id="${workout.id}">
+        <h2 class="workout__title">${workout.description}</h2>
+        <div class="workout__details">
+            <span class="workout__icon">${workout.type === 'running' ? '🏃‍♂️' : '🚴‍♀️'}</span>
+            <span class="workout__value">${workout.distance}</span>
+            <span class="workout__unit">km</span>
+        </div>
+        <div class="workout__details">
+            <span class="workout__icon">⏱</span>
+            <span class="workout__value">${workout.duration}</span>
+            <span class="workout__unit">min</span>
+        </div>`;
+        if (workout.type === 'running') {
+            html += `<div class="workout__details">
+            <span class="workout__icon">⚡️</span>
+            <span class="workout__value">${workout.pace.toFixed(1)}</span>
+            <span class="workout__unit">min/km</span>
+        </div>
+        <div class="workout__details">
+            <span class="workout__icon">🦶🏼</span>
+            <span class="workout__value">${workout.cadence}</span>
+            <span class="workout__unit">spm</span>
+        </div> </li>`
+        }
+        if (workout.type === 'cycling') {
+            html += ` <div class="workout__details">
+            <span class="workout__icon">⚡️</span>
+            <span class="workout__value">${workout.speed.toFixed(1)}</span>
+            <span class="workout__unit">km/h</span>
+        </div>
+        <div class="workout__details">
+            <span class="workout__icon">⛰</span>
+            <span class="workout__value">${workout.elevationGain}</span>
+            <span class="workout__unit">m</span>
+        </div></li>`
+        }
+        form.insertAdjacentHTML('afterend', html)
+    }
+
 }
 
 const app = new App(); //when object create from a class constructor function is called each time
