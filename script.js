@@ -1,16 +1,5 @@
 'use strict';
 
-// prettier-ignore
-const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-const form = document.querySelector('.form');
-const containerWorkouts = document.querySelector('.workouts');
-const inputType = document.querySelector('.form__input--type');
-const inputDistance = document.querySelector('.form__input--distance');
-const inputDuration = document.querySelector('.form__input--duration');
-const inputCadence = document.querySelector('.form__input--cadence');
-const inputElevation = document.querySelector('.form__input--elevation');
-
 class Workout {
     date = new Date();
     //each object should have a unique id
@@ -23,6 +12,7 @@ class Workout {
     }
 }
 class Running extends Workout {
+    type = 'running';
     constructor(coord, distance, duration, cadence) {
         super(coord, distance, duration);
         this.cadence = cadence;
@@ -35,6 +25,7 @@ class Running extends Workout {
     }
 }
 class Cycling extends Workout {
+    type = 'cycling';
     constructor(coord, distance, duration, elevationGain) {
         super(coord, distance, duration);
         this.elevationGain = elevationGain;
@@ -55,10 +46,36 @@ class Cycling extends Workout {
 
 /////////////////////////////////////////////////////////////
 //Application Architecture
+const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+];
+
+const form = document.querySelector('.form');
+const containerWorkouts = document.querySelector('.workouts');
+const inputType = document.querySelector('.form__input--type');
+const inputDistance = document.querySelector('.form__input--distance');
+const inputDuration = document.querySelector('.form__input--duration');
+const inputCadence = document.querySelector('.form__input--cadence');
+const inputElevation = document.querySelector('.form__input--elevation');
+
 class App {
     //private property that belong all instances
     #map;
     #mapEvent;
+    //here we want to store workout objects
+    #workouts = [];
+
     constructor() {
         this._getPosition();
         //form submit eventlistner
@@ -75,7 +92,7 @@ class App {
                 //1st callback is success when browser get the coordinate,2nd cllback is the error confirmation
                 //success call back, it is a function call noth method call, this is called by getcurrentposition not object method call, we know in reg func call this is undefined
                 // this._loadMap, //, it will e undefined cg js call this callback function and pass position argument, so method call is not work here , solution is we can bind this method and we know bind return a regular function
-                this._loadMap.bind(this), //not method call function call so bind it so that it can be a function call
+                this._loadMap.bind(this), //not method call function call so bind it so that it can be a function call, function call ethis undefined
                 //error call back
                 function () {
                     alert('Could not get your position');
@@ -122,16 +139,62 @@ class App {
     }
     _newWorkout(e) {
         e.preventDefault();
-        //clear input fields
+        let workout;
+        //take arbitary inputs means the argument length i dont know and it returns a array
+        const validInputs = (...inputs) =>
+            inputs.every(inp => Number.isFinite(inp)); //every returns true if all the eleemnts is true
+        const allPositive = (...inputs) => inputs.every(inp => inp > 0);
+        //*get data from the form
+        const type = inputType.value; //we get string type value so converting to number using + operator
+        const distance = +inputDistance.value;
+        const duration = +inputDuration.value;
+        const { lat, lng } = this.#mapEvent.latlng;
+        if (type === 'running') {
+            const cadence = +inputCadence.value;
+            //check if data is valid
+            //using guard class , means check opposite what we are interesting on if that opposite is true then return the function immediately
+            if (
+                //function false return korlei execute korbe
+                //&& use korle false return korleow if jehutu false hole execute korbe kintu && check korbe all false value kina  so better use or
+                !validInputs(distance, duration, cadence) ||
+                !allPositive(distance, duration, cadence)
+            ) {
+                return alert('Inputs have to be positive number!');
+            }
+            //*if workout running , create running object
+
+            workout = new Running([lat, lng], distance, duration, cadence); //object made
+        }
+
+        if (type === 'cycling') {
+            const elevation = +inputElevation.value;
+            if (
+                !validInputs(distance, duration, elevation) ||
+                !allPositive(distance, duration) //cg elevation can be begative
+            ) {
+                return alert('Inputs have to be positive number!');
+            }
+            //*if workout cycling , create cycling object
+            workout = new Cycling([lat, lng], distance, duration, elevation); //object made
+        }
+
+        //push the running or cycling object to the workout array
+        this.#workouts.push(workout);
+        //render workout on map as marker
+        this._renderworkoutMarker(workout);
+        //render workout on list
+
+        //clear input fields + hide forms
         inputDistance.value =
             inputCadence.value =
             inputDuration.value =
             inputElevation.value =
             '';
-        //display marker
-        // adding marker
-        const { lat, lng } = this.#mapEvent.latlng;
-        L.marker([lat, lng])
+    }
+    _renderworkoutMarker(workout) {
+        //get the workout object to set the data into the map from the object
+
+        L.marker(workout.coords)
             .addTo(this.#map)
             .bindPopup(
                 L.popup({
@@ -143,11 +206,14 @@ class App {
                     //when click on cross on the pop up it disappera make it false
                     closeOnClick: false,
                     //we can assign any css classname on the popup
-                    className: 'running-popup',
+                    className: `${workout.type}-popup`,
                 })
             )
-            .setPopupContent('welcome shuvo')
+            .setPopupContent('workout')
             .openPopup();
+        // Render workout on list
+
+        //Hide the form and clear input fields
     }
 }
 
