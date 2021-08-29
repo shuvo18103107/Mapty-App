@@ -91,7 +91,11 @@ class App {
     #workouts = [];
 
     constructor() {
+        //Get user Position
         this._getPosition();
+        //Get Data from local storage
+        this._getLocalStorage();
+        //Attach EventListner
         //form submit eventlistner
         form.addEventListener('submit', this._newWorkout.bind(this)); //eventhamdler e this dom element re point kore jetai add thake ekhane form
 
@@ -117,7 +121,7 @@ class App {
         }
     }
     _loadMap(position) {
-        console.log(position);
+        // console.log(position);
         const { latitude } = position.coords;
         const { longitude } = position.coords;
         // console.log(latitude, longitude);
@@ -131,7 +135,10 @@ class App {
             attribution:
                 '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         }).addTo(this.#map);
-
+        //render marker from the localstorage
+        this.#workouts.forEach(work => {
+            this._renderworkoutMarker(work);
+        });
         //displaying a map marker
         //on method is not come from js , it came from leaflet api
         //here we use on method basically to add an eventlistner
@@ -215,6 +222,8 @@ class App {
 
         //clear input fields + hide forms
         this._hideForm();
+        //set localstorage to all workouts
+        this._setLocalStorage();
     }
 
     _renderworkoutMarker(workout) {
@@ -286,13 +295,13 @@ class App {
     }
     _moveToPopup(e) {
         const workoutEl = e.target.closest('.workout');
-        console.log(workoutEl);
+        // console.log(workoutEl);
         if (!workoutEl) return; // we can also do this like if(workoutEl) then do some work
         //get the clicked workout object from the array of objects in workouts array
         const workout = this.#workouts.find(
             work => work.id === workoutEl.dataset.id
         );
-        console.log(workout);
+        // console.log(workout);
         //take the current object and  grabe the coords ans set it on map
         this.#map.setView(workout.coords, this.#mapZoomLevel, {
             animate: true,
@@ -301,8 +310,26 @@ class App {
             },
         }); //1st coords ,2nd zoom level, 3rd object of option
         //using the public interface click
-        workout.click();
+        // workout.click(); //localstorage theke data get kore parent class er function call korte parbe na cg tokn prototype chain break kore
     }
+
+    _setLocalStorage() {
+        localStorage.setItem('workouts', JSON.stringify(this.#workouts));
+    }
+    _getLocalStorage() {
+        const data = JSON.parse(localStorage.getItem('workouts'));
+        // console.log(data);
+        if (!data) return;
+
+        this.#workouts = data;
+        this.#workouts.forEach(work => {
+            this._renderWorkout(work);
+        });
+    }
+    // reset() {
+    //     localStorage.removeItem('workouts');
+    //     location.reload();
+    // }
 }
 const app = new App(); //when object create from a class constructor function is called each time
 // console.log(app);
