@@ -227,3 +227,75 @@ a:visited {
 .cycling-popup .leaflet-popup-content-wrapper {
   border-left: 5px solid var(--color-brand--1);
 }
+
+/* Clear All Button */
+.btn__clear {
+  outline: none;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  background: var(--color-brand--2);
+  color: var(--color-light--4);
+  border: 3px solid var(--color-light--4);
+  border-radius: 1em;
+}
+
+.btn__clearAll {
+  width: 100%;
+  margin-top: 44.5rem;
+  padding: 0.35rem;
+}
+
+.btn__clearAll--hidden {
+  display: none;
+}
+
+.btn__clear:hover {
+  background: var(--color-light--4);
+  border: 3px solid var(--color-brand--2);
+  color: black;
+
+  transition: 0.3s;
+}
+
+.btn__clear:active {
+  transition: 0;
+  box-shadow: 2px 2px 2px 0 grey, 2.5px 2.5px 2.5px 0 black;
+}
+
+/* Alert Message */
+.alert--deletion {
+  display: none;
+  border: 3px solid var(--color-brand--2);
+  border-radius: 1em;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+  margin: 1rem 0;
+  transition: all 0.5s;
+}
+
+.alert--deletion p {
+  margin-bottom: 2rem;
+}
+
+.alert--deletion--active {
+  display: unset;
+}
+
+.btn__alert {
+  width: 45%;
+  padding: 0.35rem;
+}
+
+.btn__alert:last-child {
+  margin-left: 7.5%;
+}
+
+.edit {
+  margin-left: 7em;
+}
+.delete {
+  margin-left: 1.2em;
+}

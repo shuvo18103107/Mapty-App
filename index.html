@@ -8,7 +8,10 @@
     <link rel="shortcut icon" type="image/png" href="/icon.png" />
 
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" />
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -23,6 +26,11 @@
         <div class="row col-12 rowWrap">
             <div class="col-lg-4 sidebar">
                 <img src="./images/logo.png" alt="Logo" class="logo" />
+                <div class="alert--deletion">
+                    <p></p>
+                    <button class="btn__clear btn__alert btn--positive">Yes</button>
+                    <button class="btn__clear btn__alert btn--negative">No</button>
+                </div>
                 <ul class="workouts">
                     <form class="form hidden">
                         <div class="form__row">
@@ -98,6 +106,7 @@
                             <span class="workout__unit">m</span>
                         </div>
                     </li> -->
+                    <button class="btn__clear btn__clearAll">Clear All</button>
                 </ul>
 
                 <p class="copyright">
