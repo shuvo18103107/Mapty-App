@@ -1,7 +1,7 @@
 <img src="./images/logo.png" align="center" alt="Logo" class="logo" style="text-align: center;">
 
 # Mapty-App 
-This is a web application where the goal is to log the workouts(running or cycling) for the users in its desired location and set some specifications for his workout accordingly. This application is built using Advanced Javascript with Object Oriented Programming which uses Geolocation APIs , Browser APIs along with some External libraries.
+This is a web application where the goal is to log the workouts(running or cycling) for the users in their desired location and set some specifications for their workout accordingly. This application is built using Advanced Javascript with Object-Oriented Programming which uses Geolocation APIs, Browser APIs along with some External libraries.
 
 ## Key functionalities:
 - Real time geolocation update
@@ -26,3 +26,7 @@ This is a web application where the goal is to log the workouts(running or cycli
 - Ability to <b>draw lines and shapes</b> instead of just points [very hard]
 - <b>Geocode</b> location from coordinates ("Run in Shymoli, Bangladesh") [ASYNC JS]
 - <b>Display weather data</b> for workout time and place [ASYNC JS]
+  
+## Deployment
+
+Deployed Website: https://shuvo18103107.github.io/Mapty-App/
