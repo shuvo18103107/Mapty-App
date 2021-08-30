@@ -293,9 +293,82 @@ a:visited {
   margin-left: 7.5%;
 }
 
-.edit {
+/* .edit {
   margin-left: 7em;
 }
 .delete {
   margin-left: 1.2em;
+} */
+/* Responsive */
+@media screen and (max-width: 1428px) and (min-width: 1200px) {
+  .sidebar {
+    width: 40.333333% !important;
+  }
+  #map {
+    width: 59.666667% !important ;
+  }
+}
+@media screen and (max-width: 1199px) and (min-width: 100px) {
+  .sidebar {
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-left-radius: 0em;
+  }
+  #map {
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-top-right-radius: 0em;
+  }
+}
+@media screen and (max-width: 510px) and (min-width: 400px) {
+  .wrapper {
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+  .workout__value {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+  }
+  .workout__icon {
+    font-size: 1.4rem;
+  }
+  .workout__title {
+    font-size: 1.4rem;
+  }
+  .workout {
+    gap: 0rem !important;
+  }
+  .form__label,
+  .form__input {
+    font-size: 1.3rem !important;
+  }
+}
+@media screen and (max-width: 400px) and (min-width: 100px) {
+  .wrapper {
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+  .workout__value {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+  .workout__icon {
+    font-size: 1.3rem;
+  }
+  .workout__title {
+    font-size: 1.4rem;
+  }
+  .workout {
+    gap: 0rem !important;
+  }
+  .sidebar {
+    padding: 0px !important;
+  }
+  .form__label,
+  .form__input {
+    font-size: 1.2rem !important;
+  }
+  body {
+    padding: 17px !important;
+  }
 }

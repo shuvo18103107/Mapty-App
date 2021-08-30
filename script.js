@@ -108,11 +108,11 @@ class App {
         containerWorkouts.addEventListener('click', this._moveToPopup.bind(this));
         //clear all workout
         clearBtn.addEventListener('click', this._deleteAll.bind(this));
-        const deleteWorkout = document.querySelectorAll('.delete');
-        console.log(deleteWorkout);
-        deleteWorkout.forEach(delItem => {
-            delItem.addEventListener('click', this._deleteItem.bind(this));
-        });
+        // const deleteWorkout = document.querySelectorAll('.delete');
+        // console.log(deleteWorkout);
+        // deleteWorkout.forEach(delItem => {
+        //     delItem.addEventListener('click', this._deleteItem.bind(this));
+        // });
     }
 
     //protected methods
@@ -263,11 +263,11 @@ class App {
 
         //Hide the form and clear input fields
     }
+    //<i class="fa fa-pencil edit"></i><i class="fa fa-trash-o delete"></i>
     _renderWorkout(workout) {
         let html = ` <li class="workout workout--${workout.type}" data-id="${workout.id
             }">
-        <h2 class="workout__title">${workout.description
-            } <i class="fa fa-pencil edit"></i><i class="fa fa-trash-o delete"></i></h2>
+        <h2 class="workout__title">${workout.description} </h2>
         
 
 
@@ -367,30 +367,30 @@ class App {
         alertMessage.classList.add('alert--deletion--active');
         clearBtn.style.display = 'none';
     }
-    _deleteItem(e) {
-        let target = e.target.closest('.workout');
-        // console.log(target);
-        let workOutArray = this.#workouts;
-        console.log(workOutArray);
-        this._renderAlert();
+    // _deleteItem(e) {
+    //     let target = e.target.closest('.workout');
+    //     // console.log(target);
+    //     let workOutArray = this.#workouts;
+    //     console.log(workOutArray);
+    //     this._renderAlert();
 
-        alert('hi vai');
+    //     alert('hi vai');
 
-        btnPositive.addEventListener('click', function () {
-            workOutArray.forEach((item, i) => {
-                item.id === target.dataset.id;
+    //     btnPositive.addEventListener('click', function () {
+    //         workOutArray.forEach((item, i) => {
+    //             item.id === target.dataset.id;
 
-                workOutArray.splice(i, 1);
-                console.log(workOutArray);
-                localStorage.setItem('workouts', JSON.stringify(workOutArray));
-                location.reload();
-            });
-        });
-        btnNegative.addEventListener('click', () => {
-            alertMessage.classList.remove('alert--deletion--active');
-            clearBtn.style.display = 'unset';
-        });
-    }
+    //             workOutArray.splice(i, 1);
+    //             console.log(workOutArray);
+    //             localStorage.setItem('workouts', JSON.stringify(workOutArray));
+    //             location.reload();
+    //         });
+    //     });
+    //     btnNegative.addEventListener('click', () => {
+    //         alertMessage.classList.remove('alert--deletion--active');
+    //         clearBtn.style.display = 'unset';
+    //     });
+    // }
 }
 const app = new App(); //when object create from a class constructor function is called each time
 // console.log(app);
