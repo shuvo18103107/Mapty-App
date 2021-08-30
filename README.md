@@ -26,6 +26,7 @@ This is a web application where the goal is to log the workouts(running or cycli
 - Ability to <b>draw lines and shapes</b> instead of just points [very hard]
 - <b>Geocode</b> location from coordinates ("Run in Shymoli, Bangladesh") [ASYNC JS]
 - <b>Display weather data</b> for workout time and place [ASYNC JS]
+- Improve responsiveness for mobile device and customize the UI to make more user friendly
   
 ## Deployment
 
