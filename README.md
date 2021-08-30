@@ -1,6 +1,7 @@
 # Mapty-App
 This is a web application where the goal is to log the workouts(running or cycling) for the users in its desired location and set some specifications for his workout accordingly. This application is built using Advanced Javascript with Object Oriented Programming which uses Geolocation APIs , Browser APIs along with some External libraries.
-##Key functionalities:
+
+## Key functionalities:
 - Real time geolocation update
 - Custom map by leaflet API
 - Ability to log a workout(Running or Cycling) to specific location
@@ -12,7 +13,7 @@ This is a web application where the goal is to log the workouts(running or cycli
 - All the workout information will save in the localstorage so that application will not loose its stat in case browser is load.
 - Ability to delete all workouts
 
-##Future functionalities: <br>
+## Future functionalities: <br>
 - Ability to <b>delete</b> a workout
 - Ability to <b>edit</b> a workout
 - Create <b>'Add Workout'<b> button to better improve the App`s UX and UI.
