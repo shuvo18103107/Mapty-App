@@ -292,7 +292,35 @@ a:visited {
 .btn__alert:last-child {
   margin-left: 7.5%;
 }
+/* scroll to top button */
+.scroll-to-top-btn {
+  background: var(--color-primary);
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all 0.5s ease;
+}
 
+.show-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* .edit {
   margin-left: 7em;
 }
