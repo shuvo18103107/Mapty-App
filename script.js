@@ -119,6 +119,7 @@ class App {
     _getPosition() {
         //geolocation api and leaflet api implementation
         if (navigator.geolocation) {
+            console.log(navigator.geolocation);
             navigator.geolocation.getCurrentPosition(
                 //1st callback is success when browser get the coordinate,2nd cllback is the error confirmation
                 //success call back, it is a function call noth method call, this is called by getcurrentposition not object method call, we know in reg func call this is undefined
@@ -132,7 +133,7 @@ class App {
         }
     }
     _loadMap(position) {
-        // console.log(position);
+        console.log(position);
         const { latitude } = position.coords;
         const { longitude } = position.coords;
         // console.log(latitude, longitude);
@@ -146,7 +147,10 @@ class App {
             attribution:
                 '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         }).addTo(this.#map);
+
+
         //render marker from the localstorage
+        console.log('load workout object' + JSON.stringify(this.#workouts))
         this.#workouts.forEach(work => {
             this._renderworkoutMarker(work);
         });
