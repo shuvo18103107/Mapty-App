@@ -39,19 +39,38 @@
     // Prepare demo data. The data is joined to map using value of 'hc-key'
     // property by default. See API docs for 'joinBy' for more info on linking
     // data and map.
+    // const data = [
+    //   ['bd-da', 10], ['bd-kh', 11], ['bd-ba', 12], ['bd-cg', 13],
+    //   ['bd-sy', 14], ['bd-rj', 15], ['bd-rp', 16]
+    // ];
+    // const data = [
+    //   ['bd-da', 10], ['bd-kh', 11], ['bd-ba', 12], ['bd-cg', 13],
+    //   ['bd-sy', 14], ['bd-rj', 15], ['bd-rp', 16], ['bd-mm', 17]
+    // ];
     const data = [
       ['bd-da', 10], ['bd-kh', 11], ['bd-ba', 12], ['bd-cg', 13],
-      ['bd-sy', 14], ['bd-rj', 15], ['bd-rp', 16]
+      ['bd-sy', 14], ['bd-rj', 15], ['bd-rp', 16], ['bd-mm', 17]
     ];
 
-    // Create the chart
     Highcharts.mapChart('container', {
       chart: {
         map: topology
       },
-
+      plotOptions: {
+        series: {
+          point: {
+            events: {
+              click: function () {
+                const lat = this.latitude;
+                const lon = this.longitude;
+                console.log(`Latitude: ${lat}, Longitude: ${lon}`);
+              }
+            }
+          }
+        }
+      },
       title: {
-        text: 'Highcharts Maps basic demo'
+        text: 'Bangladesh Map '
       },
 
       subtitle: {
@@ -82,7 +101,18 @@
           format: '{point.name}'
         }
       }]
+
+
     });
+    // Create the chart
+    // Highcharts.mapChart('container', {
+    //   chart: {
+    //     map: topology
+    //   },
+
+
+
+    // });
 
   })();
 

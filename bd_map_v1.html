@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+  <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/mapdata/countries/bd/bd-all.js"></script>
+  <style>
+    #container {
+      height: 500px;
+      min-width: 310px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <script>
+    (async () => {
+      const topology = await fetch('https://code.highcharts.com/mapdata/countries/bd/bd-all.topo.json')
+        .then(response => response.json());
+
+      const data = [
+        ['bd-dh', 10], ['bd-sy', 11], ['bd-rj', 12], ['bd-rp', 13],
+        ['bd-kh', 14], ['bd-cg', 15], ['bd-da', 16], ['bd-ba', 17]
+      ];
+
+      const geometries = topology.objects.bd_districts.geometries;
+      console.log(geometries);
+
+      Highcharts.mapChart('container', {
+        chart: {
+          map: 'countries/bd/bd-all'
+        },
+
+        title: {
+          text: 'Bangladesh Map'
+        },
+
+        mapNavigation: {
+          enabled: true,
+          buttonOptions: {
+            verticalAlign: 'bottom'
+          }
+        },
+
+        colorAxis: {
+          min: 0
+        },
+
+        series: [{
+          data: data,
+          name: 'Districts',
+          states: {
+            hover: {
+              color: '#BADA55'
+            }
+          },
+          dataLabels: {
+            enabled: true,
+            format: '{point.name}'
+          }
+        }]
+      });
+
+    })();
+  </script>
+</body>
+
+</html>

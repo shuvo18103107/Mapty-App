@@ -8,10 +8,21 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
+
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-drawer/3.2.2/css/drawer.min.css"> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <style>
     #map {
       height: 600px;
       width: 100%;
+    }
+
+    .ui-dialog {
+      left: 10px;
+      position: absolute;
+      top: 10px;
     }
   </style>
 </head>
@@ -19,75 +30,80 @@
 
 <body>
   <div id="map"></div>
+  <!-- HTML for the jQuery drawer -->
+  <div id="drawer"
+    style="display:none; position:fixed; top:0; left:0; width:400px; height:100%; background-color:#fff;">
+    <div id="drawer-content" style="padding:20px;"></div>
+  </div>
   <script>
+
+
     const districts = [
-
-
       { name: 'Dhaka', lat: 23.8103, lng: 90.4125, institute: 8, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
 
-      { name: 'Faridpur', lat: 23.5423919, lng: 89.6308921 },
-      { name: 'Gazipur', lat: 24.0958171, lng: 90.4125181 },
-      { name: 'Gopalganj', lat: 26.4685472, lng: 84.4433318 },
-      { name: 'Jamalpur', lat: 25.312717, lng: 86.4906091 },
-      { name: 'Kishoreganj', lat: 24.4260457, lng: 90.9820668 },
-      { name: 'Madaripur', lat: 23.2393346, lng: 90.1869644 },
-      { name: 'Manikganj', lat: 23.8616512, lng: 90.0003228 },
-      { name: 'Munshiganj', lat: 23.4980931, lng: 90.4126621 },
-      { name: 'Mymensingh', lat: 24.7434484, lng: 90.3983829 },
-      { name: 'Narayanganj', lat: 23.6226398, lng: 90.4997973 },
-      { name: 'Narsingdi', lat: 24.134378, lng: 90.7860057 },
-      { name: 'Netrokona', lat: 24.8103284, lng: 90.8656415 },
-      { name: 'Rajbari', lat: 23.715134, lng: 89.5874819 },
-      { name: 'Shariatpur', lat: 23.2423214, lng: 90.4347711 },
-      { name: 'Sherpur', lat: 25.0746235, lng: 90.1494904 },
-      { name: 'Tangail', lat: 24.244968, lng: 89.9113052 },
-      { name: 'Bogra', lat: 24.8435589, lng: 89.3701078 },
-      { name: 'Joypurhat', lat: 25.0947349, lng: 89.0944937 },
-      { name: 'Naogaon', lat: 24.9131597, lng: 88.7530952 },
-      { name: 'Natore', lat: 24.410243, lng: 89.0076177 },
-      { name: 'Nawabganj', lat: 28.5405365, lng: 79.6305599 },
-      { name: 'Pabna', lat: 24.0113256, lng: 89.2562239 },
-      { name: 'Rajshahi', lat: 24.3635886, lng: 88.6241351 },
-      { name: 'Sirajgonj', lat: 24.3141115, lng: 89.5699615 },
-      { name: 'Dinajpur', lat: 25.6279123, lng: 88.6331758 },
-      { name: 'Gaibandha', lat: 25.3296928, lng: 89.5429652 },
-      { name: 'Kurigram', lat: 25.8072414, lng: 89.6294746 },
-      { name: 'Lalmonirhat', lat: 25.9923398, lng: 89.2847251 },
-      { name: 'Nilphamari', lat: 25.8482798, lng: 88.9414134 },
-      { name: 'Panchagarh', lat: 26.2708705, lng: 88.5951751 },
-      { name: 'Rangpur', lat: 25.7438916, lng: 89.275227 },
-      { name: 'Thakurgaon', lat: 26.0418392, lng: 88.4282616 },
-      { name: 'Barguna', lat: 22.0952915, lng: 90.1120696 },
-      { name: 'Barisal', lat: 22.7029212, lng: 90.3465971 },
-      { name: 'Bhola', lat: 22.1785315, lng: 90.7101023 },
-      { name: 'Jhalokati', lat: 22.57208, lng: 90.1869644 },
-      { name: 'Patuakhali', lat: 22.2248632, lng: 90.4547503 },
-      { name: 'Pirojpur', lat: 22.5790744, lng: 89.9759264 },
-      { name: 'Bandarban', lat: 21.8311002, lng: 92.3686321 },
-      { name: 'Brahmanbaria', lat: 23.9608181, lng: 91.1115014 },
-      { name: 'Chandpur', lat: 23.2513148, lng: 90.8517846 },
-      { name: 'Chittagong', lat: 22.3475365, lng: 91.8123324 },
-      { name: 'Comilla', lat: 23.46188, lng: 91.186911 },
-      { name: 'CoxBazar', lat: 21.4394636, lng: 92.0077316 },
-      { name: 'Feni', lat: 23.0159132, lng: 91.3975831 },
-      { name: 'Khagrachari', lat: 23.1321751, lng: 91.949021 },
-      { name: 'Lakshmipur', lat: 22.9446744, lng: 90.8281907 },
-      { name: 'Noakhali', lat: 22.8723789, lng: 91.0973184 },
-      { name: 'Rangamati', lat: 22.7324173, lng: 92.2985134 },
-      { name: 'Habiganj', lat: 24.4771236, lng: 91.4506565 },
-      { name: 'Maulvibazar', lat: 24.3095344, lng: 91.7314903 },
-      { name: 'Sunamganj', lat: 25.0714535, lng: 91.3991627 },
-      { name: 'Sylhet', lat: 24.904539, lng: 91.8611011 },
-      { name: 'Bagerhat', lat: 22.6602436, lng: 89.7895478 },
-      { name: 'Chuadanga', lat: 23.6160512, lng: 88.8263006 },
-      { name: 'Jessore', lat: 23.1634014, lng: 89.2181664 },
-      { name: 'Jhenaidah', lat: 23.5449873, lng: 89.1726031 },
-      { name: 'Khulna', lat: 22.845641, lng: 89.5403279 },
-      { name: 'Kushtia', lat: 23.8906995, lng: 89.1099368 },
-      { name: 'Magura', lat: 23.4854655, lng: 89.4198305 },
-      { name: 'Meherpur', lat: 23.8051991, lng: 88.6723578 },
-      { name: 'Narail', lat: 23.1656982, lng: 89.4990219 },
-      { name: 'Satkhira', lat: 22.3154812, lng: 89.1114525 }
+      { name: 'Faridpur', lat: 23.5423919, lng: 89.6308921, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Gazipur', lat: 24.0958171, lng: 90.4125181, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Gopalganj', lat: 26.4685472, lng: 84.4433318, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Jamalpur', lat: 25.312717, lng: 86.4906091, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Kishoreganj', lat: 24.4260457, lng: 90.9820668, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Madaripur', lat: 23.2393346, lng: 90.1869644, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Manikganj', lat: 23.8616512, lng: 90.0003228, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Munshiganj', lat: 23.4980931, lng: 90.4126621, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Mymensingh', lat: 24.7434484, lng: 90.3983829, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Narayanganj', lat: 23.6226398, lng: 90.4997973, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Narsingdi', lat: 24.134378, lng: 90.7860057, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Netrokona', lat: 24.8103284, lng: 90.8656415, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Rajbari', lat: 23.715134, lng: 89.5874819, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Shariatpur', lat: 23.2423214, lng: 90.4347711, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Sherpur', lat: 25.0746235, lng: 90.1494904, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Tangail', lat: 24.244968, lng: 89.9113052, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Bogra', lat: 24.8435589, lng: 89.3701078, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Joypurhat', lat: 25.0947349, lng: 89.0944937, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Naogaon', lat: 24.9131597, lng: 88.7530952, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Natore', lat: 24.410243, lng: 89.0076177, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Nawabganj', lat: 28.5405365, lng: 79.6305599, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Pabna', lat: 24.0113256, lng: 89.2562239, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Rajshahi', lat: 24.3635886, lng: 88.6241351, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Sirajgonj', lat: 24.3141115, lng: 89.5699615, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Dinajpur', lat: 25.6279123, lng: 88.6331758, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Gaibandha', lat: 25.3296928, lng: 89.5429652, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Kurigram', lat: 25.8072414, lng: 89.6294746, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Lalmonirhat', lat: 25.9923398, lng: 89.2847251, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Nilphamari', lat: 25.8482798, lng: 88.9414134, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Panchagarh', lat: 26.2708705, lng: 88.5951751, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Rangpur', lat: 25.7438916, lng: 89.275227, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Thakurgaon', lat: 26.0418392, lng: 88.4282616, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Barguna', lat: 22.0952915, lng: 90.1120696, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Barisal', lat: 22.7029212, lng: 90.3465971, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Bhola', lat: 22.1785315, lng: 90.7101023, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Jhalokati', lat: 22.57208, lng: 90.1869644, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Patuakhali', lat: 22.2248632, lng: 90.4547503, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Pirojpur', lat: 22.5790744, lng: 89.9759264, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Bandarban', lat: 21.8311002, lng: 92.3686321, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Brahmanbaria', lat: 23.9608181, lng: 91.1115014, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Chandpur', lat: 23.2513148, lng: 90.8517846, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Chittagong', lat: 22.3475365, lng: 91.8123324, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Comilla', lat: 23.46188, lng: 91.186911, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'CoxBazar', lat: 21.4394636, lng: 92.0077316, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Feni', lat: 23.0159132, lng: 91.3975831, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Khagrachari', lat: 23.1321751, lng: 91.949021, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Lakshmipur', lat: 22.9446744, lng: 90.8281907, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Noakhali', lat: 22.8723789, lng: 91.0973184, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Rangamati', lat: 22.7324173, lng: 92.2985134, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Habiganj', lat: 24.4771236, lng: 91.4506565, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Maulvibazar', lat: 24.3095344, lng: 91.7314903, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Sunamganj', lat: 25.0714535, lng: 91.3991627, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Sylhet', lat: 24.904539, lng: 91.8611011, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Bagerhat', lat: 22.6602436, lng: 89.7895478, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Chuadanga', lat: 23.6160512, lng: 88.8263006, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Jessore', lat: 23.1634014, lng: 89.2181664, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Jhenaidah', lat: 23.5449873, lng: 89.1726031, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Khulna', lat: 22.845641, lng: 89.5403279, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Kushtia', lat: 23.8906995, lng: 89.1099368, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Magura', lat: 23.4854655, lng: 89.4198305, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Meherpur', lat: 23.8051991, lng: 88.6723578, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Narail', lat: 23.1656982, lng: 89.4990219, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] },
+      { name: 'Satkhira', lat: 22.3154812, lng: 89.1114525, location: [{ name: 'Shymoli Politecnic', lat: 23.7710, lng: 90.3639, course: 5 }, { name: 'Mirpur 1 Politecnic', lat: 23.7956, lng: 90.3537, course: 8 }, { name: 'Goumoti Politecnic', lat: 23.7227, lng: 90.4139, course: 8 }] }
 
       // add the rest of the districts with their latitudes and longitudes
     ];
@@ -140,8 +156,6 @@
       }
     }).addTo(map);
 
-
-
     const buildingIcon = new L.Icon({
       iconUrl: 'https://cdn0.iconfinder.com/data/icons/real-estate-flat-icons-vol-2/256/67-512.png',
       iconSize: [30, 40],
@@ -149,18 +163,66 @@
       popupAnchor: [0, -35],
       // shadowSize: [41, 41]
     });
+    // for (const district of districts) {
+    //   const marker = L.marker([district.lat, district.lng])
+    //     .bindPopup(`<b>(${district.name})</b> <b>Total Institute </b>: ${district.institute}</b>`, { autoClose: false, autoPan: true })
+    //     .on('click', function (e) {
+    //       // set the view to the clicked district's coordinates
+    //       map.setView([district.lat, district.lng], 10);
+    //       // add markers for each location within the district
+    //       if (district.location) {
+    //         for (const location of district.location) {
+    //           L.marker([location.lat, location.lng], { icon: buildingIcon })
+    //             .bindPopup(`<b>(${location.name})</b> Course: ${location.course}`, { autoClose: false, autoPan: true })
+    //             .addTo(map).openPopup();
+    //         }
+    //       }
+    //     })
+    //     .addTo(map);
+    //   // marker.openPopup();
+    // }
+
     for (const district of districts) {
       const marker = L.marker([district.lat, district.lng])
         .bindPopup(`<b>(${district.name})</b> <b>Total Institute </b>: ${district.institute}</b>`, { autoClose: false, autoPan: true })
         .on('click', function (e) {
+
+          // district drawer 
+          $("#drawer").show();
+          $("#drawer-content").html(`
+        <b>District Name:</b> ${district.name}<br>
+        <b>Total Institute:</b> ${district.institute}<br>
+      `);
           // set the view to the clicked district's coordinates
           map.setView([district.lat, district.lng], 10);
           // add markers for each location within the district
+          // open the drawer and pass the district object
+          // Open the drawer and pass the district object to it
+
           if (district.location) {
+            let latSum = 0;
+            let lngSum = 0;
+            for (const location of district.location) {
+              latSum += location.lat;
+              lngSum += location.lng;
+            }
+            const centerLat = latSum / district.location.length;
+            const centerLng = lngSum / district.location.length;
+            let maxDistance = 0;
+            for (const location of district.location) {
+              const distance = Math.sqrt(Math.pow(centerLat - location.lat, 2) + Math.pow(centerLng - location.lng, 2));
+              maxDistance = Math.max(maxDistance, distance);
+            }
+            const circle = L.circle([centerLat, centerLng], {
+              color: 'orange',
+              fillColor: '#f03',
+              fillOpacity: 0.5,
+              radius: maxDistance * 110000
+            }).addTo(map);
             for (const location of district.location) {
               L.marker([location.lat, location.lng], { icon: buildingIcon })
                 .bindPopup(`<b>(${location.name})</b> Course: ${location.course}`, { autoClose: false, autoPan: true })
-                .addTo(map).openPopup();
+                .addTo(map);
             }
           }
         })
