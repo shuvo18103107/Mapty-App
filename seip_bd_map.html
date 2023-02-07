@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 "> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="bn" xml:lang="bn" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta Tags -->
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <meta name="csrf-token" content="j274bFG6AjtBwk7gj68YuU5VJDQDVSYmgqKMUcC4" />
+  <title>SEIP Bangladesh Map</title>
+  <link href="favicon.ico" rel="shortcut icon" type="image/ico">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Muli:400,400i,600,700%7CPT+Sans:400,400i,700,700i"
+    rel="stylesheet">
+  <link href="http://krishi.gov.bd/assets/frontend/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://krishi.gov.bd/assets/frontend/css/font-awesome.min.css" rel="stylesheet">
+  <!--<link href="plugins/swiper/swiper.min.css')}}" rel="stylesheet">-->
+  <link href="http://krishi.gov.bd/assets/frontend/plugins/ui-slider/jquery-ui.min.css" rel="stylesheet">
+  <!--<link href="plugins/light-box/lightbox.min.css" rel="stylesheet">-->
+  <link href="http://krishi.gov.bd/assets/frontend/css/style.css" rel="stylesheet">
+  <link href="http://krishi.gov.bd/assets/frontend/css/responsive.css" rel="stylesheet">
+  <link href="http://krishi.gov.bd/assets/frontend/css/custom.css" rel="stylesheet">
+  <link href="https://fonts.maateen.me/kalpurush/font.css" rel="stylesheet">
+
+
+  <style>
+    .logo {
+      padding-top: 10px;
+    }
+
+    .mugib-logo img {
+      height: 58px;
+      vertical-align: middle;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .logo {
+        height: 40px;
+      }
+    }
+
+    i#edirectory {
+      font-size: 24px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+      margin-top: -3px;
+    }
+  </style>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-73WMF5DZT3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-73WMF5DZT3');
+  </script>
+
+</head>
+
+<body>
+
+  <div id="ajax_preloader">
+    <img src="http://krishi.gov.bd/images/loading_ellipsis.svg">
+  </div>
+
+  <!--<div class="preLoader"></div>-->
+
+  <header class="header">
+    <!-- <div class="sticky-wrapper" style="height: 91px;">
+      <div class="main-header light-bg stuck">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+              <div class="logo-warp">
+                <a href="http://krishi.gov.bd">
+                  <img class="logo" alt="Krishi Logo" data-rjs="2" src="http://krishi.gov.bd/upzilla/images/logo.png">
+                </a>
+                <div class="mugib-logo" style="float: right"><img
+                    src="http://krishi.gov.bd/assets/frontend/images/mujib_100.png" alt=""></div>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
+              <div class="search_main search-bar-wrap clearfix">
+                <div id="search_main">
+                  <img class="" src="http://krishi.gov.bd/upzilla/icon/search.png" alt="Image">
+                  <span class="">সার্চ করুন</span>
+                </div>
+                <div id="main_search_bar" class="search-bar-wrap">
+                  <div class="search-sug shadow">
+                    <form method="get" action="http://krishi.gov.bd/search" class="search-bar">
+                      <i class="icon fa fa-search"></i>
+                      <input class="input-text" type="text" name="q" placeholder="সার্চ করুন" autocomplete="off">
+                    </form>
+                    <div class="row">
+                      <div class="col-md-6 sugg-group">
+                        <h5 class="sugg-head">বিষয়</h5>
+                        <ul>
+                          <li><a href="http://krishi.gov.bd/farmer_search">কৃষক</a></li>
+                          <li><a href="http://krishi.gov.bd/pest">ফসলের রোগ-বালাই</a></li>
+                          <li><a href="http://krishi.gov.bd/crop">বিভিন্ন ফসল এবং জাত</a>
+                          </li>
+                          <li><a href="http://krishi.gov.bd/questions">আলোচনা / প্রশ্নোত্তর</a></li>
+                          <li><a href="http://krishi.gov.bd/videos">ভিডিও</a></li>
+                          <li><a href="http://krishi.gov.bd/gallery"> ছবির এ্যালবাম</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6 sugg-group">
+                        <h5 class="sugg-head">বিভিন্ন বিষয়ের লেখা</h5>
+                        <ul>
+                          <li><a href="http://krishi.gov.bd/section/2/উদ্ভাবন"><span>উদ্ভাবন</span></a>
+                          </li>
+                          <li>
+                            <a href="http://krishi.gov.bd/section/3/আগামীর-কৃষি"><span>আগামীর কৃষি</span></a>
+                          </li>
+                          <li>
+                            <a href="http://krishi.gov.bd/section/4/এখনকার-করনীয়"><span>এখনকার করনীয়</span></a>
+                          </li>
+                          <li><a href="http://krishi.gov.bd/section/5/চলতি-ফসল"><span>চলতি ফসল</span></a>
+                          </li>
+                          <li>
+                            <a href="http://krishi.gov.bd/section/6/দেশজ-কৃষি"><span>দেশজ কৃষি</span></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+              <div class="menu--inner-area clear-fix">
+                <div class="menu-wraper">
+                  <nav class="justify-content-end">
+                    <div class="header-menu pt-sans">
+                      <ul>
+
+                        <li class="">
+                          <a href="http://krishi.gov.bd" class="nav-link">
+                            <img class="header_icon" src="http://krishi.gov.bd/upzilla/icon/home.png" alt="Image">
+                            <span class="">প্রচ্ছদ</span>
+                          </a>
+                        </li>
+                        <li class="">
+                          <a href="http://krishi.gov.bd/crop" class="nav-link">
+                            <img class="header_icon" src="http://krishi.gov.bd/upzilla/icon/crop.png" alt="Image">
+                            <span class="">ফসল</span>
+                          </a>
+                        </li>
+                        <li class="">
+                          <a href="http://krishi.gov.bd/questions" class="nav-link">
+                            <img class="header_icon" src="http://krishi.gov.bd/upzilla/icon/question.png" alt="Image">
+                            <span class="">প্রশ্নোত্তর</span>
+                          </a>
+                        </li>
+                        <li class="">
+                          <a href="http://krishi.gov.bd/videos" class="nav-link">
+                            <img class="header_icon" src="http://krishi.gov.bd/upzilla/icon/video.png" alt="Image">
+                            <span class="">ভিডিও</span>
+                          </a>
+                        </li>
+
+                        <li class="">
+                          <a href="http://krishi.gov.bd/e-directory" class="nav-link">
+                            <i class="fa fa-sitemap" id="edirectory"></i> <br>
+
+                            <span class="" id="directory">ই-ডিরেক্টরি </span>
+                          </a>
+                        </li>
+                        <li class="header-btn-login">
+                          <a href="http://krishi.gov.bd/login" class="nav-link">
+                            <img class="header_icon" src="http://krishi.gov.bd/upzilla/icon/login.png" alt="Home">
+                            <span>লগইন</span>
+                          </a>
+                        </li>
+                      </ul>
+                      <div class="call-center-tab" style="display: none"><img
+                          src="http://krishi.gov.bd/upzilla/images/CallCenter.png" alt=""></div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="sticky-wrapper mobile">
+      <div class="main-header bg-light stuck">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="http://krishi.gov.bd">
+              <img class="logo" alt="Krishi Logo" src="http://krishi.gov.bd/upzilla/images/logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+              aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <div class="row">
+                <div class="col-sm-4 col-12">
+                  <hr>
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                      <a class="nav-link" href="http://krishi.gov.bd">প্রচ্ছদ</a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link" href="http://krishi.gov.bd/crop">ফসল</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="http://krishi.gov.bd/question">প্রশ্নোত্তর</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="http://krishi.gov.bd/videos">ভিডিও</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="http://krishi.gov.bd/login" class="nav-link">
+                        <span>লগইন</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-8 col-12">
+                  <hr>
+                  <p class="text-center">
+                    <img src="http://krishi.gov.bd/assets/frontend/images/CallCenter.png" alt="3331"
+                      style="cursor: pointer" onclick="window.location.href='http://krishi.gov.bd/call-service';">
+                  </p>
+                  <hr>
+                  <div class="search clearfix">
+                    <form method="get" action="http://krishi.gov.bd/search" class="search-bar shadow-sm">
+                      <i class="icon fa fa-search"></i>
+                      <input class="input-text" type="text" name="q" placeholder="সার্চ করুন" autocomplete="off">
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div> -->
+  </header>
+
+  <div id="Content">
+    <style>
+      .content_box ul {
+        list-style-type: square
+      }
+    </style>
+    <div class="container">
+      <div class="section mcb-section  section-border-bottom mt-20 ">
+        <div class="section_wrapper mcb-section-inner row">
+          <div class="col-md-12">
+            <div class="map-box content_box">
+              <div class="title b-b">ইনস্টিটিউট তথ্য জানতে জেলার উপর ক্লিক করুন</div>
+              <div class="map" style="width: 95%; height: 1000px;"></div>
+            </div>
+          </div>
+          <!-- <div class="col-md-4"> -->
+          <!-- <div class="row">
+              <div class="col-md-6">
+                <div class="content_box">
+                  <div class="b-b title"> চট্টগ্রাম বিভাগ </div>
+                  <ul style="">
+                    <li><a href="http://krishi.gov.bd/regional-page/Comilla"><span class="district">কুমিল্লা</span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Feni"><span class="district">ফেনী </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Brahmanbaria"><span
+                          class="district">ব্রাহ্মণবাড়িয়া </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Rangamati"><span class="district">রাঙ্গামাটি
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Noakhali"><span class="district">নোয়াখালী
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Chandpur"><span class="district">চাঁদপুর </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Lakshmipur"><span class="district">লক্ষ্মীপুর
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Chattogram"><span class="district">চট্টগ্রাম
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Cox_s_Bazar"><span class="district">কক্সবাজার
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Khagrachari"><span class="district">খাগড়াছড়ি
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Bandarban"><span class="district">বান্দরবান
+                        </span></a></li>
+                  </ul>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="col-md-6">
+                <div class="content_box">
+                  <div class="b-b title"> রাজশাহী বিভাগ </div>
+                  <ul style="">
+                    <li><a href="http://krishi.gov.bd/regional-page/Sirajganj"><span class="district">সিরাজগঞ্জ
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Pabna"><span class="district">পাবনা </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Bogura"><span class="district">বগুড়া </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Rajshahi"><span class="district">রাজশাহী </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Natore"><span class="district">নাটোর </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Jaipurhat"><span class="district">জয়পুরহাট
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/ChapaiNawabganj"><span
+                          class="district">চাঁপাইনবাবগঞ্জ </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Naogaon"><span class="district">নওগাঁ </span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="col-md-6">
+                <div class="content_box">
+                  <div class="b-b title"> খুলনা বিভাগ </div>
+                  <ul style="">
+                    <li><a href="http://krishi.gov.bd/regional-page/Jessore"><span class="district">যশোর </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Shatkhira"><span class="district">সাতক্ষীরা
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Meherpur"><span class="district">মেহেরপুর
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Narail"><span class="district">নড়াইল </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Chuadanga"><span class="district">চুয়াডাঙ্গা
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Kushtia"><span class="district">কুষ্টিয়া </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Magura"><span class="district">মাগুরা </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Khulna"><span class="district">খুলনা </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Bagerhat"><span class="district">বাগেরহাট
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Jhinaidaha"><span class="district">ঝিনাইদহ
+                        </span></a></li>
+                  </ul>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="col-md-6">
+                <div class="content_box">
+                  <div class="b-b title"> বরিশাল বিভাগ </div>
+                  <ul style="">
+                    <li><a href="http://krishi.gov.bd/regional-page/Jhalokati"><span class="district">ঝালকাঠি
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Patuakhali"><span class="district">পটুয়াখালী
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Pirojpur"><span class="district">পিরোজপুর
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Barisal"><span class="district">বরিশাল </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Bhola"><span class="district">ভোলা </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Borguna"><span class="district">বরগুনা </span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="col-md-6">
+                <div class="content_box">
+                  <div class="b-b title"> সিলেট বিভাগ </div>
+                  <ul style="">
+                    <li><a href="http://krishi.gov.bd/regional-page/Sylhet"><span class="district">সিলেট </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Maulvibazar"><span class="district">মৌলভীবাজার
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Habiganj"><span class="district">হবিগঞ্জ </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Sunamganj"><span class="district">সুনামগঞ্জ
+                        </span></a></li>
+                  </ul>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="col-md-6">
+                <div class="content_box">
+                  <div class="b-b title"> ঢাকা বিভাগ </div>
+                  <ul style="">
+                    <li><a href="http://krishi.gov.bd/regional-page/Narsingdi"><span class="district">নরসিংদী
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Gazipur"><span class="district">গাজীপুর </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Shariatpur"><span class="district">শরীয়তপুর
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Narayanganj"><span class="district">নারায়ণগঞ্জ
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Tangail"><span class="district">টাঙ্গাইল </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Kishoreganj"><span class="district">কিশোরগঞ্জ
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Manikganj"><span class="district">মানিকগঞ্জ
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Dhaka"><span class="district">ঢাকা </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Munshiganj"><span class="district">মুন্সিগঞ্জ
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Rajbari"><span class="district">রাজবাড়ী </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Madaripur"><span class="district">মাদারীপুর
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Gopalganj"><span class="district">গোপালগঞ্জ
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Faridpur"><span class="district">ফরিদপুর </span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="col-md-6">
+                <div class="content_box">
+                  <div class="b-b title"> রংপুর বিভাগ </div>
+                  <ul style="">
+                    <li><a href="http://krishi.gov.bd/regional-page/Panchagarh"><span class="district">পঞ্চগড়
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Dinajpur"><span class="district">দিনাজপুর
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Lalmonirhat"><span class="district">লালমনিরহাট
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Nilphamari"><span class="district">নীলফামারী
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Gaibandha"><span class="district">গাইবান্ধা
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Thakurgaon"><span class="district">ঠাকুরগাঁও
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Rangpur"><span class="district">রংপুর </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Kurigram"><span class="district">কুড়িগ্রাম
+                        </span></a></li>
+                  </ul>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="col-md-6">
+                <div class="content_box">
+                  <div class="b-b title"> ময়মনসিংহ বিভাগ </div>
+                  <ul style="">
+                    <li><a href="http://krishi.gov.bd/regional-page/Sherpur"><span class="district">শেরপুর </span></a>
+                    </li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Mymensingh"><span class="district">ময়মনসিংহ
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Jamalpur"><span class="district">জামালপুর
+                        </span></a></li>
+                    <li><a href="http://krishi.gov.bd/regional-page/Netrokona"><span class="district">নেত্রকোণা
+                        </span></a></li>
+                  </ul>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div> -->
+
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <footer>
+    <div class="footer-info pt-40 pb-20">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="footer-widget mt-4 logo">
+              <a href="http://krishi.gov.bd/"><img class="img-fluid"
+                  src="http://krishi.gov.bd/upzilla/images/logo.png"></a>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col">
+                <div class="footer-widget" data-delay=".3">
+                  <div class="menu-wrap">
+                    <ul class="menu">
+                      <li><a href="http://krishi.gov.bd">প্রচ্ছদ</a></li>
+                      <li><a href="http://krishi.gov.bd/crops">ফসল</a></li>
+                      <li><a href="http://krishi.gov.bd/e-directory">ই-ডিরেক্টরি </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="footer-widget" data-delay=".5">
+                  <div class="menu-wrap">
+                    <ul class="menu">
+                      <li><a href="http://krishi.gov.bd/videos"> ভিডিও</a></li>
+                      <li><a href="http://krishi.gov.bd/question">প্রশ্নোত্তর</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="footer-widget" data-delay=".7">
+                  <div class="menu-wrap">
+                    <ul class="menu">
+                      <li><a href="http://krishi.gov.bd/section/3/আগামীর-কৃষি">আগামীর কৃষি</a></li>
+                      <li><a href="http://krishi.gov.bd/gallery">ছবিতে কৃষি</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-12">
+                <div class="footer-widget social" data-delay=".7">
+                  <div class="menu-wrap">
+                    <ul class="menu footer-social">
+                      <li class="facebook"><a href="https://www.facebook.com/Agriculture4Bangladesh/" target="_blank"><i
+                            class="fa fa-facebook"></i> Follow Us on Facebook</a></li>
+                      <li class="twitter"><a href="#"><i class="fa fa-twitter"></i> Follow Us on Twitter</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-border-warp">
+      <span class="one border"></span>
+      <span class="two border"></span>
+      <span class="three border"></span>
+      <span class="four border"></span>
+      <span class="five border"></span>
+    </div>
+    <div class="footer-credits gray-section">
+
+      <div class="container">
+        <div class="row">
+          <div class="col pr-35">
+            <h4>পরিকল্পনা ও বাস্তবায়নে</h4>
+            <div class="row no-gutters">
+              <div class="col">
+                <a href="https://moa.gov.bd">
+                  <img src="http://krishi.gov.bd/upzilla/images/logos/govt.png" class="img-govt">
+                  <p style="font-size: 11px; margin-top: 5px;">কৃষি মন্ত্রণালয়</p>
+                </a>
+              </div>
+              <div class="col">
+                <a href="http://www.dae.gov.bd">
+                  <img src="http://krishi.gov.bd/upzilla/images/logos/dae.png" class="img-govt">
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="http://krishi.gov.bd/images/IFIAPP-Logo-v2.png" class="img-govt">
+                </a>
+              </div>
+            </div>
+          </div>
+          <span class="single-border"></span>
+          <div class="col-md-5 px-35">
+            <h4>কারিগরী সহায়তায়</h4>
+            <a href="http://a2i.pmo.gov.bd/">
+              <img src="http://krishi.gov.bd/upzilla/images/logos/a2i_logoset.png">
+            </a>
+          </div>
+          <span class="single-border"></span>
+          <div class="col-md-2 col-6 emergency">
+            <h4>জরুরী প্রয়োজনে</h4>
+            <a href="http://krishi.gov.bd/call-service">
+              <img src="images/icons/footer-call.png">
+            </a>
+          </div>
+          <span class="single-border"></span>
+          <div class="col-md-2 col-6">
+            <h4> সিস্টেম ডেভেলপমেন্টে </h4>
+            <a href="http://softbdltd.com/" target="_blank">
+              <img src="http://krishi.gov.bd/upzilla/images/logos/sbd.png" style="height: auto">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="text-center">
+          <span class="copyright">© সর্বস্বত্ব স্বত্বাধিকার সংরক্ষিত</span>
+        </div>
+      </div>
+    </div>
+  </footer> -->
+
+  <div class="back-to-top">
+    <a class="d-flex align-items-center justify-content-center" href="#">
+      <img alt="" class="svg" src="http://krishi.gov.bd/assets/frontend/img/icons/up-arrow.svg">
+    </a>
+  </div>
+
+  <script src="http://krishi.gov.bd/assets/frontend/js/jquery-3.3.1.min.js"></script>
+  <script src="http://krishi.gov.bd/assets/frontend/js/bootstrap.bundle.min.js"></script>
+  <script src="http://krishi.gov.bd/assets/frontend/plugins/waypoints/jquery.waypoints.min.js"></script>
+  <script src="http://krishi.gov.bd/assets/frontend/plugins/waypoints/sticky.min.js"></script>
+
+  <script src="http://krishi.gov.bd/assets/frontend/plugins/parsley/parsley.min.js"></script>
+
+  <script src="http://krishi.gov.bd/assets/frontend/plugins/ui-slider/jquery-ui.min.js"></script>
+
+  <script src="http://krishi.gov.bd/assets/js/jquery.lazy.min.js"></script>
+  <script src="http://krishi.gov.bd/assets/frontend/js/menu.min.js"></script>
+
+  <script src="http://krishi.gov.bd/assets/frontend/js/custom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+  <script type="text/javascript">
+
+    //modal
+    $('#exampleModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var recipient = button.data('whatever') // Extract info from data-* attributes
+      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+      var modal = $(this)
+      modal.find('.modal-title').text('New message to ' + recipient)
+      modal.find('.modal-body input').val(recipient)
+    })
+
+    $(document).ready(function () {
+
+      $('.lazy').Lazy();
+
+      $("#search_main").click(function () {
+        $("#main_search_bar").fadeToggle();
+      });
+
+      $(".header-menu ul li a").css({ "padding-left": "31px", "padding-right": "31px", "transition": "0.3s" });
+      // $("#main_search_bar").css({"top": "72px","transition": "0.5s"});
+
+      var $window = $(window);
+      var windowsize = $window.width();
+      if (windowsize > 800 && windowsize < 1200) {
+        $(".header-menu ul li a").css({ "padding-left": "21px", "padding-right": "21px", "transition": "0.3s" });
+      }
+
+      window.onscroll = function () { scrollFunction() };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          $(".header-menu ul li a").css({ "padding-top": "7px", "padding-bottom": "7px", "transition": "0.3s" });
+          $("#main_search_bar").css({ "top": "56px", "transition": "0.5s" });
+          $(".header-menu ul li.call-center img").css({ "margin-top": "-20px", "transition": "0.3s" });
+        } else {
+          $(".header-menu ul li a").css({ "padding-top": "23px", "padding-bottom": "23px", "transition": "0.3s" });
+          $("#main_search_bar").css({ "top": "72px", "transition": "0.5s" });
+          $(".header-menu ul li.call-center img").css({ "margin-top": "0px", "transition": "0.3s" });
+        }
+      }
+      ///important link mousehover
+      $("#important-link").mouseover(function () {
+        $("#important-link li").removeClass("active");
+      });
+      $("#important-link").mouseout(function () {
+        // $("#important-link li:first-child").addClass( "active" );
+        $("#important-link li:first-child").addClass("");
+
+      });
+
+      // Social Media Collapse
+      $('#sm-close').click(function () {
+        $('.s-media').addClass('sm-collapse');
+        $('#sm-open').delay(300).css('left', '0');
+      });
+
+      $('#sm-open').click(function () {
+        $('#sm-open').css('left', '-60px');
+        $('.s-media').removeClass('sm-collapse');
+      });
+
+    });
+  </script>
+
+  <!-- INNER CONTENT JS   -->
+  <link type="text/css" media="all" rel="stylesheet" href="http://krishi.gov.bd/js/jvectormap/jquery-jvectormap.css">
+
+  <script src="http://krishi.gov.bd/js/jvectormap/jquery-jvectormap.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/lib/jquery-mousewheel.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/jvectormap.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/abstract-element.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/abstract-canvas-element.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/abstract-shape-element.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/svg-element.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/svg-group-element.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/svg-canvas-element.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/svg-shape-element.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/svg-path-element.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/svg-circle-element.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/svg-image-element.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/svg-text-element.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/map-object.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/region.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/marker.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/vector-canvas.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/ordinal-scale.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/numeric-scale.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/color-scale.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/legend.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/data-series.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/proj.js"></script>
+
+  <script src="http://krishi.gov.bd/js/jvectormap/src/map.js"></script>
+
+  <script>
+    jQuery.fn.vectorMap(
+      'addMap', 'bangladesh', {
+      "insets": [{
+        "width": 1500,
+        "top": 0,
+        "height": 2000,
+        "bbox": [{
+          "y": -5490816.561605522,
+          "x": -2029882.6485830692
+        }, {
+          "y": -2690009.0242363815,
+          "x": 2555799.0309089404
+        }],
+        "left": 0
+      }],
+      "projection": {
+        "type": "aea",
+        "centralMeridian": -100.0
+      },
+      "paths": {
+        "Comilla": {
+          "name": "Comilla",
+          "path": "M824.83 1092.44l4.08 -7.40l1.47 -2.25l-1.96 -3.22l0.65 -5.47l5.23 2.25l2.29 -3.38l-1.14 -1.93l-0.33 -1.45l2.12 -1.29l5.39 3.54l4.08 -1.13l-0.49 -3.38l2.45 -0.64l5.39 0.16l2.94 -2.73l7.03 0.48l-1.14 -0.32l4.08 2.25l2.45 2.09l-1.96 1.61l3.43 1.13l0.65 1.61h1.80 0.00l-0.33 3.54l3.76 3.54l0.82 1.61l-0.16 4.18l1.14 2.73l3.76 3.86l-0.16 2.57l2.29 0.81l-1.15 0.96l0.16 1.93l4.74 3.70l2.45 7.88l2.45 7.88l0.41 2.71l-0.57 1.96l0.33 1.61l3.27 1.77l-1.31 1.13l-0.16 1.45l1.14 2.41l0.98 1.29l-0.33 1.61l0.65 12.39l1.63 2.09l1.80 3.54l-0.49 4.02l-3.60 2.09l-4.58 -2.41l-3.92 0.16l-5.88 -0.81l-2.94 -1.93l-2.94 -0.16l-3.43 1.93l-1.14 -0.81h-3.27 0.00l-4.25 -2.09l-2.12 -3.70l-0.16 0.32l-2.61 -0.16l-1.80 -2.57l3.10 -0.81l1.96 -2.73l-0.33 -5.63l2.13 -3.54l-2.45 -2.25l-0.49 -3.54l-2.94 -3.54l-1.31 -2.90l-4.90 -3.54l-0.65 -3.22l-3.43 -2.25l-1.31 -6.28l-6.54 -1.77l-4.74 4.02l-1.80 -1.13l-1.80 3.70h-1.96 0.00l-4.41 -2.41v0.00 -3.06h-0.16 0.00l-2.13 -2.25l-3.10 -3.06l2.61 -1.45l-0.16 -3.06L824.83 1092.44L824.83 1092.44z",
+          "id": "2",
+        },
+        "Jessore": {
+          "name": "Jessore",
+          "path": "M608.89 1134.05l3.70 -6.37l-3.70 -3.19h2.77 0.00l4.62 2.27h5.08 0.00l-6.01 -4.55l2.31 -1.82l6.47 0.46l-3.23 -3.64l1.39 -2.27l0.93 1.82l5.55 1.82l-2.31 1.82l1.39 3.64l4.16 0.46l1.85 5.46l5.55 -0.91l6.01 -1.36l-1.85 -3.64l0.46 -1.82l2.31 1.82l2.77 -2.27l-0.92 -2.73l1.85 -0.91l6.01 4.10l2.31 -0.46l0.46 2.27l2.77 2.73l2.31 0.46l1.39 -1.82l2.31 3.19l4.16 1.36l-1.39 2.27l2.31 1.36l-1.39 1.36l0.46 5.46l-1.39 1.82l0.92 4.10l-4.16 0.46v0.00 1.36l2.31 0.91l0.46 1.82l-1.39 0.46l0.46 3.19l4.16 -2.73h1.39 0.00l-0.46 4.55l2.77 0.91v0.00 0.91h4.16 0.00l0.92 1.36l-0.92 3.19l2.77 4.55c0.00 0.00 2.31 3.19 0.46 3.19s-2.77 0.00 -2.77 0.00l-3.23 -0.91l-1.39 -1.36l-2.31 -5.46l-1.39 -1.36l-3.23 2.27l0.92 3.19l-2.77 4.10l-6.01 2.73l-0.46 2.27l1.85 2.27l-0.46 5.92l-0.46 1.82l-5.08 -2.28v0.00 -2.27l-1.85 -0.45l-0.46 1.36l-4.16 3.64l-2.77 -0.46l-4.16 2.27h-2.77 0.00l0.00 0.00l-3.23 -2.27l-0.46 0.46l-1.85 -1.36l-0.46 -2.28l2.77 -0.46l-3.23 -4.10l2.77 0.46l0.46 -1.36l-1.85 -3.19l-3.70 -2.27l-0.46 2.73h-7.16 0.00l-3.00 -2.27l-2.31 -1.36l0.00 0.00l1.85 4.32l-1.85 1.82l-6.93 -0.91l-1.85 -2.05l-2.31 1.36h-1.85 0.00l1.39 -2.73l-5.55 -2.27l0.92 -8.19l2.77 -0.91l-1.39 -2.27v0.00 -2.27l-1.85 -1.36l3.70 -5.92l4.62 -1.82l-0.46 -3.64l4.62 -3.19l1.85 1.36l1.39 -2.73l-1.85 -0.91l-0.46 -2.27l-4.16 3.19l-2.31 -1.36L608.89 1134.05L608.89 1134.05z",
+          "id": "25",
+        },
+        "Shatkhira": {
+          "name": "Shatkhira",
+          "path": "M618.59 1170.01l3.23 4.09l-2.31 2.73l-2.77 -1.82l-3.70 0.46l-1.85 -1.82l-4.16 2.27l0.93 3.64l2.77 3.19l1.39 -2.27l1.85 0.91l-0.46 2.27l1.85 0.91l-0.46 2.73l-2.77 2.73l1.85 1.82l-1.85 0.46l-0.46 4.10l-2.77 -1.36l0.92 4.10l3.70 5.01l-4.16 7.74l4.62 3.19l-0.92 2.73l-0.92 3.64l4.16 3.19l-0.92 4.10l2.77 4.55l0.46 5.01l1.85 1.36l-4.16 1.36l0.46 2.73l1.85 1.36l-1.85 7.74l4.62 0.46l0.92 3.64l-3.70 -0.91v0.00 2.27l2.77 3.19l2.77 0.46v0.00 4.10l3.23 2.73l0.46 5.92l4.16 -0.91l-3.23 4.55h-4.16 0.00l-0.46 3.64l1.39 4.55l4.16 7.28l-1.39 0.91l-0.46 10.92l3.23 4.10l0.46 5.92l0.46 3.19l5.55 2.73l4.16 -1.82l2.77 5.46l-0.92 2.27l2.77 2.73l-1.85 4.10l-4.16 4.55l5.55 2.27l5.55 -1.36l-0.92 -2.27h3.23 0.00l0.46 -2.73l-2.31 -1.36l1.85 -2.73v0.00 -9.10l-1.85 -0.91l3.93 -3.19l3.00 -8.65l2.77 -2.73l-1.39 -4.10l-3.70 -6.83l-3.70 -7.28l-1.39 -3.19l3.23 -3.19h-7.86 0.00l4.62 -6.37l2.31 -5.01l1.85 -11.38l-4.62 -7.28v0.00 -2.28l2.77 -2.27l-4.62 -3.19l0.46 -8.65l4.16 -2.27l-4.16 -7.74l0.46 -10.47l2.77 -3.19l2.31 4.10l2.77 -3.64l-0.92 -2.27l-2.77 -0.46l-1.85 -1.82l1.85 -3.64l0.92 1.82l2.31 0.91l0.92 -3.19l2.31 -1.36l-0.46 -2.27l-4.16 -6.83l-4.62 -2.27l-2.31 -4.10l-0.93 -1.36l-3.70 2.73l-3.23 0.46l-2.77 -2.73l-1.39 0.91l-1.85 -4.10l2.77 -0.91l-4.16 -4.10l3.70 0.91l-1.85 -5.46l-2.77 -1.82l-0.46 3.19h-7.39 0.00L618.59 1170.01L618.59 1170.01z",
+          "id": "26",
+        },
+        "Narsingdi": {
+          "name": "Narsingdi",
+          "path": "M810.40 1049.41l4.62 -4.10l1.85 -2.73l-1.85 -3.19h2.77 0.00l1.85 -5.01v0.00 -5.01l-0.92 -4.55l-2.31 -1.36l1.85 -1.36l2.31 2.73l4.16 -0.91h1.39 0.00l-2.77 -3.19l1.39 -5.92l-1.39 -3.19v0.00 -4.55l1.85 -1.82l2.77 0.46l3.23 -2.73l4.16 6.83l3.23 1.36l2.31 3.64l4.62 1.82l0.46 1.36l-2.77 1.37l2.31 2.73l-3.23 0.91l5.08 -0.46l2.77 3.19l4.16 -1.36l0.93 4.55l2.77 1.36l-0.93 1.37l-2.77 4.55l1.39 4.09l-2.31 0.91l-2.77 7.28l-1.85 1.36l-0.93 2.27l-0.46 0.91l-6.01 -0.46l-3.23 1.36h-2.77 0.00v0.00 -0.91l-3.23 -0.46l-1.39 0.91l-0.46 5.92l-2.77 4.55l-4.16 -3.64l-0.46 -2.27l-0.92 3.19l-3.70 -0.91l-1.39 -1.37l2.77 -1.36l-1.39 -3.19l-3.23 1.37l-0.92 2.28l-1.39 -2.73l3.23 -4.55L810.40 1049.41L810.40 1049.41z",
+          "id": "40",
+        },
+        "Jhalokati": {
+          "name": "Jhalokati",
+          "path": "M745.69 1246.46l-2.31 1.82l-0.92 -3.64l3.23 -4.10l-1.39 -6.83l2.77 2.73l3.23 -1.82l1.85 1.82l5.55 -3.64l0.46 -2.73l-7.39 -2.27l-0.46 -8.65l4.62 -1.36v0.00 -3.19l-3.23 -3.64l5.08 -2.73l0.46 -3.64l4.16 -2.27l-0.46 -1.36l2.31 -0.91l0.46 -2.27l-3.23 -1.82l3.23 -2.73l1.85 -0.91l0.92 2.73h2.77 0.00l1.85 -0.91l3.70 4.10l-1.39 1.82l-0.46 2.27l0.92 1.36h2.77 0.00l1.39 2.27l7.86 1.36l0.46 1.82l-2.31 0.46l-1.39 2.27l5.08 0.91l0.46 2.27l-4.16 0.91c0.00 0.00 0.93 2.73 -0.92 2.73c-1.85 0.00 -3.70 -1.82 -3.70 -1.82l-1.39 1.82l-2.77 -0.45l-1.39 2.73l-0.93 2.73l-3.23 1.36l-5.08 3.19l-3.24 2.27l-0.46 3.19l-0.93 5.46l-3.70 2.27l-1.85 4.10l-2.31 2.73L745.69 1246.46L745.69 1246.46z",
+          "id": "31",
+        },
+        "Sylhet": {
+          "name": "Sylhet",
+          "path": "M942.58 951.11l5.08 -8.65l-3.23 -4.10l2.77 -0.46l-2.31 -6.37l3.23 -2.73h3.70 0.00l-3.70 -4.55l3.23 -5.46l0.46 -4.55l-3.70 -2.27l2.31 -2.28l-4.62 -5.46v0.00 -1.82l1.85 -1.82v0.00 -4.55l-3.70 -3.19l0.46 -2.28l-2.77 -2.27l1.39 -2.27h1.39 0.00l4.16 1.36l2.77 -3.19l13.87 0.46l8.32 -1.36l3.23 2.73l2.77 -3.64h7.39 0.00l5.08 1.82l4.16 5.01l1.85 -0.46l1.85 1.36l1.85 -0.91l3.23 1.82v0.00 2.27l2.31 0.46l5.55 2.73l3.70 0.91l1.39 -1.36h1.85 0.00v0.00 3.64l5.08 1.37l4.62 2.73l-0.92 2.73l1.85 4.10l4.16 1.37l-1.85 2.27l4.16 0.46l1.85 2.73l-0.46 6.83h-1.85 0.00l-1.85 -0.91l-2.77 2.73l-5.55 -0.46l-7.86 -1.36l-4.62 1.36l-3.70 2.27l3.23 3.64l-0.46 3.19l-4.16 7.74h-3.23 0.00l-6.93 0.91l-1.85 -3.64h-2.31 0.00l-0.46 3.19l-1.85 5.92l-4.62 3.64l-2.31 0.91l-5.55 1.36l-2.31 -1.82l-2.77 1.82l-3.23 -0.46l-1.39 -2.28l-3.23 1.82l-2.31 -2.27l-2.77 3.19l-3.70 5.01l-7.40 0.46l-1.39 -3.19l-4.62 -0.46l1.85 -2.73L942.58 951.11L942.58 951.11z",
+          "id": "36",
+        },
+        "Maulvibazar": {
+          "name": "Maulvibazar",
+          "path": "M936.57 1006.63l3.23 -8.65l-3.23 -7.28l2.31 -20.93l2.77 -1.82l5.08 0.46l-3.70 -1.82l-4.62 -5.46l2.31 -1.37l3.23 0.46l3.23 3.19l2.77 -3.64l6.93 0.46l7.39 -9.10l2.31 2.27l2.77 -1.36l1.39 2.27l4.62 0.46l1.85 -1.82l1.85 1.82l6.47 -1.36l6.47 -3.64l2.31 -9.56h2.31 0.00l1.39 3.64l6.47 -1.36h4.62 0.00l-0.92 3.19l-1.39 3.19l-3.23 5.92l-1.39 8.19l-6.93 4.55l-0.93 8.19l2.31 3.19v0.00 2.73l-3.23 6.37h-6.01 0.00l-9.24 -1.37l-3.70 0.91l3.70 3.19l0.93 3.64l-2.31 0.91l-0.93 -2.27l-0.46 -1.82l-2.77 -0.46l-3.23 3.19l1.85 1.82v0.00 10.01l-2.31 2.73l-0.92 9.10h-3.23 0.00l-2.31 -5.01l-3.70 -3.19l1.85 -1.82l-3.70 0.91h-4.16 0.00l-1.39 -2.73l-2.77 0.46h0.46 0.00v0.00 8.65l1.85 2.73l-2.31 1.82l-2.31 -0.91l-1.39 -2.28l-4.16 -2.73L936.57 1006.63L936.57 1006.63z",
+          "id": "37",
+        },
+        "Panchagarh": {
+          "name": "Panchagarh",
+          "path": "M539.56 719.47l-0.92 -3.19l-0.92 -2.27l2.31 -3.19l1.85 -4.10l1.85 -5.46l3.70 -5.46l0.92 5.92l0.46 3.19l3.70 3.64l3.70 -0.91l0.92 3.19l3.70 0.91l0.46 2.73l3.70 1.36l0.46 1.82l3.70 0.91l2.31 -2.73l1.39 3.64l1.85 2.27l2.77 1.82l0.92 1.82l2.31 -0.91l1.39 1.36l-1.39 3.19l1.39 1.36l1.85 1.36v0.00 0.91l3.70 -0.46v0.00 1.82l0.92 1.82h-6.01 0.00l0.46 4.10l-4.16 0.91l-0.46 1.82l3.70 -0.46l3.23 -1.36l3.23 -2.73l2.31 1.82l-0.46 4.09l1.85 3.19l2.31 3.19l-0.92 3.19v0.00 4.55v0.00 4.10l-1.39 3.64l0.92 4.55l-2.31 3.19l-3.23 4.55l-3.70 -0.91l-5.08 -0.46l-1.85 -3.64l-2.31 -1.82l2.77 -5.01l-1.85 -3.64l-2.31 -2.73l-3.70 -1.36l-1.85 -1.82l-1.39 -2.73l-2.31 0.91c0.00 0.00 -0.58 -0.46 -1.85 -0.91s-3.23 -0.91 -3.23 -0.91l-2.31 -0.91l-2.31 1.82l-3.70 -0.91l-3.24 -1.36l-2.77 1.82l-0.46 2.27c0.00 0.00 -1.50 -0.23 -3.23 -0.91c-1.73 -0.68 -3.70 -1.82 -3.70 -1.82l-0.92 -1.36l3.23 -1.82l1.85 -2.27l-1.39 -2.73v0.00 -6.37l5.08 -0.46l1.85 -1.82l1.85 -2.73l4.16 -1.36l0.92 -3.19l2.31 3.64l2.31 -1.36l1.85 -3.19l-1.85 -2.27l-1.85 -2.73v0.00 -3.19l-3.23 -2.73l-4.16 0.91l-2.31 -3.64l-2.31 1.82l-2.77 -0.46L539.56 719.47z",
+          "id": "57",
+        },
+        "Gazipur": {
+          "name": "Gazipur",
+          "path": "M754.01 1033.48l7.40 -6.37l-0.92 -3.64h1.85 0.00v0.00 -2.73l2.77 2.73l2.77 -0.46l-0.46 -7.74l1.39 -5.01l6.47 -2.73l-0.93 -4.10l4.16 -1.82l-1.39 -1.37l2.77 -0.91l3.23 -0.46l1.39 -2.73l2.77 3.19l2.77 -0.46l1.85 1.37l1.39 -7.74l4.62 -0.46l1.39 1.82l5.55 2.27v0.00 2.27l3.70 3.64h4.16 0.00l0.93 -1.36h3.70 0.00l5.08 3.19l2.77 1.36l-2.77 1.82l0.46 4.10l1.85 3.64l-1.39 3.19l-0.46 2.73l2.77 2.73l-5.08 0.91l-1.85 -1.82l-1.39 1.36l1.85 0.91l0.93 8.65l-2.31 5.46l-2.31 0.46l1.39 2.28l-2.77 4.55l-3.70 2.73l-2.31 -1.82l-4.62 -5.46l-0.46 2.27l-2.77 -0.46l-3.70 7.74l-2.31 -1.82l-1.85 1.36l-3.70 0.91l-2.77 -2.73l-3.70 0.91v0.00 -9.10h-6.47 0.00l-3.70 -1.36l3.23 -3.64l-2.31 -3.64l-1.39 -0.46l-2.77 5.01l-1.39 -2.73l-3.70 1.82l-3.23 1.82L754.01 1033.48L754.01 1033.48z",
+          "id": "42",
+        },
+        "Sirajganj": {
+          "name": "Sirajganj",
+          "path": "M653.25 992.52v0.00 -6.83l-2.31 -1.82v0.00 -1.82l-3.23 -2.73l12.48 -15.02l-0.92 -1.82h8.32 0.00l3.23 2.73h3.23 0.00l4.16 -2.27l3.70 1.82l0.92 -3.19l1.85 3.64l3.23 0.91v0.00 -2.28h2.31 0.00l2.31 -1.82l-3.70 -2.28l1.85 -1.82l-3.23 -2.73l-2.77 0.46l-0.93 -0.46l2.31 -2.28l-2.31 -1.36l1.39 -5.01v0.00 -3.19l2.31 2.28l2.77 -0.91l2.77 2.73l6.01 -6.37l-0.92 -2.73l0.92 -4.55l5.55 0.46l1.85 2.27l1.39 1.36l0.92 -1.82h1.39 0.00l2.31 2.28l1.39 0.46l0.46 2.73l-2.77 0.46l-0.46 1.36l2.77 2.28v0.00 6.83l-0.92 3.64h-2.77 0.00l2.31 2.73l0.46 3.19l-2.31 1.36l-0.46 2.73l-1.85 -0.46l-2.31 2.73l2.31 3.19v0.00 3.64l-3.23 2.27l-1.39 2.27l6.47 6.83l-2.77 2.73l0.46 1.82l3.23 2.28l2.31 3.64l-0.92 13.20l1.39 1.82l-1.39 1.36v0.00 1.82l1.39 0.46l1.85 1.82v0.00 1.36l1.39 1.36l-0.46 5.46l-3.23 6.37l-6.01 2.27h-3.23 0.00l-3.70 -4.55l-5.55 -4.10h-4.16 0.00l-6.01 -5.01l-4.62 -0.91l-0.46 -2.27l2.31 -0.91l0.46 -3.19l-1.85 -0.91l1.39 -0.91v0.00 -1.82l-1.85 -2.28l-1.39 0.91l-4.16 0.91l-1.39 -0.91v0.00 -3.19l1.85 -0.91c0.00 0.00 0.00 -2.73 -1.85 -2.73c-1.85 0.00 -2.31 0.00 -2.31 0.00l-1.39 2.28h-0.92 0.00l-0.92 -2.73v0.00 -3.64l-4.16 -2.73l-3.70 -0.91L653.25 992.52z",
+          "id": "14",
+        },
+        "Meherpur": {
+          "name": "Meherpur",
+          "path": "M587.63 1038.48l5.55 5.92l0.46 -4.55l2.77 2.73v0.00 2.73l1.39 1.82l2.77 -2.73l3.23 5.01l-4.16 2.73l2.77 2.27l2.77 -0.91l0.92 1.82l-3.23 1.36v0.00 0.91l-0.46 2.73l-2.31 -1.37l-1.85 2.73l0.46 4.10l-4.16 0.46l0.12 8.65l-3.81 3.98l-3.58 0.57l-2.43 1.82l-1.85 -0.46l-6.01 5.01l-0.92 1.36l-6.70 0.34l0.69 -4.89l-3.23 -0.91l-0.92 -1.82l2.31 -1.37l0.93 -3.19l-2.31 -0.91l0.46 -5.00l2.31 -2.28l-3.23 -4.55l2.31 0.91l2.77 -2.73v0.00 -0.91l-1.39 -1.36l0.46 -5.01l-0.92 -0.91l2.77 -1.36l2.31 0.91v0.00 2.73l1.60 -2.01l2.79 -0.15l4.85 -5.12l3.00 -0.34l1.04 -2.73l-0.81 -3.75L587.63 1038.48z",
+          "id": "24",
+        },
+        "Feni": {
+          "name": "Feni",
+          "path": "M900.33 1191.07l-2.61 -3.86l0.65 -3.86l3.92 -7.08l-4.58 0.64l-5.88 -1.29l-1.96 1.93l1.31 -5.15l-0.65 -4.51l1.31 -3.86l-1.96 -7.72l7.19 1.93l3.92 -3.22l3.92 1.29l2.61 -2.57l-1.96 -5.79l-1.31 -3.86v0.00 -3.86l1.31 -5.15l0.65 -4.51l5.88 1.29l3.92 6.44l3.92 7.72l1.31 5.79v0.00 5.15l4.58 6.44l-0.65 4.50l5.23 1.93l-7.19 0.64l0.65 7.08h-5.23 0.00l-3.92 2.57l-1.96 5.79l-4.58 6.44v0.00 4.51l-2.62 -1.29v0.00 -3.22L900.33 1191.07L900.33 1191.07z",
+          "id": "8",
+        },
+        "Pabna": {
+          "name": "Pabna",
+          "path": "M618.59 1022.10v0.00 -3.19l1.85 -3.19l2.31 2.27l9.24 -1.82l4.62 -3.64l0.93 -3.64l2.77 0.91l4.16 -2.28l2.77 -8.19l2.77 1.37l0.46 -3.64l3.70 -3.64l9.71 2.27l3.24 1.36v0.00 4.55l1.39 2.73l3.24 -1.82l2.77 0.91l-1.85 1.36v0.00 3.64l1.85 1.37h4.16 0.00l1.85 -2.28l1.85 3.19l-2.77 2.28h2.31 0.00v0.00 2.73l-2.77 1.36l0.92 3.19l4.16 0.46l6.01 5.01l4.16 -0.46l6.01 5.00l3.23 4.55l-4.62 0.91v0.00 2.73l-1.85 0.45l0.46 4.10l2.31 2.73l3.70 -0.91l1.85 5.46h-1.85 0.00l-3.70 -4.10l1.39 5.46l5.55 0.91l4.16 2.73l-4.16 1.36l-2.31 1.37l-5.55 -0.46l-5.54 -2.27l-6.47 1.82l-4.16 1.82l-11.09 -6.83l-1.85 -4.55l-5.55 -5.92h-2.31 0.00l1.85 4.55l-2.31 2.73l-5.08 -0.91l-3.23 -4.55l-4.62 -5.00l-1.85 -0.91h-6.47 0.00l-2.77 -1.82h-5.08 0.00l-2.77 -0.46l-3.70 3.19v0.00 -2.28l-3.70 -1.37l-1.85 -3.64l0.92 -5.92L618.59 1022.10L618.59 1022.10z",
+          "id": "17",
+        },
+        "Shariatpur": {
+          "name": "Shariatpur",
+          "path": "M792.48 1161.47l-6.54 1.93l-3.92 2.57l-1.31 3.22l-4.46 -3.33l-3.38 -4.39l1.96 -3.86l2.61 -3.86l-3.92 -3.86l-3.27 -5.79l-4.58 -3.22l-1.96 -8.37l5.88 -4.50l4.58 -8.37l3.92 -5.79l6.54 0.64l5.88 4.51l2.61 4.50h5.23 0.00h4.58 0.00l1.96 4.51l0.65 4.50l1.96 7.08l-2.62 5.79l-3.84 2.92l2.50 3.89l-8.46 2.20L792.48 1161.47L792.48 1161.47z",
+          "id": "51",
+        },
+        "Bogura": {
+          "name": "Bogura",
+          "path": "M614.43 939.73l-0.46 -9.56l-1.85 -1.36l3.70 -3.19h2.77 0.00l1.39 3.19l0.46 -3.19h1.39 0.00v0.00 2.73l3.23 -4.09l2.31 2.27l5.55 -4.55l-4.62 -4.55l2.31 0.91l0.46 -6.83l2.77 1.36l0.46 2.73l5.08 0.46v0.00 1.82h3.70 0.00l-0.46 -2.73l-2.31 -1.36v0.00 -2.73l2.31 0.46l2.77 -7.28l3.23 1.82l-1.39 -2.73h3.23 0.00l-2.31 -3.19l4.62 -2.73l0.46 -3.19l-1.85 -0.46l1.85 -1.82l5.08 0.91l3.23 1.82l0.92 4.10l4.16 0.91l0.93 -2.27l4.16 2.27l1.39 -2.73l3.70 3.64l5.55 0.91l2.31 2.27h1.85 0.00l1.39 -3.19l7.86 -0.91l1.39 2.28l1.39 0.46l-1.39 3.64h1.85 0.00l0.92 3.19l-1.85 2.73l1.85 1.37l-0.92 2.27l1.85 2.73l0.46 3.19l-2.31 0.46v0.00 4.10l3.70 4.10h3.23 0.00l1.39 2.27l-0.92 1.36h-6.47 0.00l-0.92 1.37v0.00 2.73h-0.92 0.00v0.00 3.19l-4.62 6.37l-3.23 -3.19l-2.31 1.36l-1.85 -1.82v0.00 2.27l-1.85 1.82l-0.46 3.64l1.85 0.91l-0.92 2.28l0.46 0.91l2.77 -0.46l2.77 2.27l-1.85 2.27l3.23 1.82l-1.85 2.27h-2.77 0.00l-0.46 1.82l-2.77 -0.91l-1.85 -2.73l-0.46 2.27h-2.77 0.00l-1.39 -1.82l-3.70 1.82l-3.23 0.46l-3.70 -2.27l-9.24 0.46v0.00 -2.27l-2.31 -3.19h-1.39 0.00l-2.77 -2.73l-3.70 -0.46l-1.85 1.36l0.92 3.64l-0.46 1.36l-5.08 -4.10v0.00 -1.82l1.85 -1.36l-0.92 -2.27l-2.77 2.27l-1.39 -1.36l-2.31 5.01l-3.23 -6.37l2.31 -2.73l-0.46 -6.83l-2.31 2.27l-4.62 -0.46l0.46 -2.28l-4.16 -6.83l-3.23 3.64l-1.39 -1.82L614.43 939.73z",
+          "id": "18",
+        },
+        "Dinajpur": {
+          "name": "Dinajpur",
+          "path": "M576.07 772.71l-2.31 2.27l-0.92 3.64l-3.23 0.91l-2.77 -4.10l-0.92 3.19h-3.23 0.00l-1.39 5.01l2.31 1.36v0.00 1.36l-2.77 -0.46l-4.16 9.10l1.39 2.27l-0.92 1.36l-3.70 0.46l-0.46 -2.73l-1.39 0.91l-5.08 -0.91l0.92 4.55l-2.31 -0.91l-0.46 4.10l2.31 1.37l-1.39 3.19l0.46 3.19l4.62 3.64v0.00 3.64l1.85 1.36l-0.46 4.10l-1.85 0.91v0.00 3.64l2.77 1.82h4.16 0.00v0.00 3.64l3.23 2.27l1.39 3.19l5.55 0.46l3.23 -0.91l0.92 2.27l4.16 0.46v0.00 1.82l6.47 0.91l1.85 -1.82l2.31 -1.37c0.00 0.00 5.55 2.27 4.16 0.46s-1.39 -5.01 -1.39 -5.01l2.77 2.73l2.77 -2.73v0.00 4.55l2.31 0.91l1.85 4.10l-1.85 4.55l-2.31 1.36l2.77 1.36l0.46 3.64l6.01 5.92l1.39 -2.27l1.39 1.82v0.00 1.82l11.55 0.91l1.39 1.82l-0.46 3.19l5.08 2.73l4.62 -0.91l2.31 3.64l6.47 -0.91l13.87 3.19l3.70 -1.82v0.00 -3.19l-3.70 -4.09l-0.46 -4.10l-5.08 -4.10l0.92 -1.82l-1.39 -0.91h-2.31 0.00l-0.46 -2.73h-4.16 0.00l-2.77 -3.19l1.39 -0.91l-4.62 -2.73l-3.23 -12.74l-1.85 -4.55l-6.93 -1.37l-3.23 -7.28l-6.47 -4.10l-0.92 -6.37l-5.08 -1.36l-1.85 -1.82l-2.77 -0.46l1.39 -5.01h-4.62 0.00l-0.46 -10.92l-3.70 -6.37l-4.16 -0.91l-1.39 -3.64v0.00 -4.10l-7.86 -1.36L576.07 772.71z",
+          "id": "59",
+        },
+        "Narail": {
+          "name": "Narail",
+          "path": "M671.74 1134.05l-2.31 -3.19l3.70 -0.45l3.70 -3.64l1.39 -1.36l2.77 4.10l3.23 -1.36l2.31 -3.19h5.08 0.00l1.39 3.64h3.70 0.00l0.46 0.91l-3.24 3.64l1.39 2.73h5.08 0.00l2.31 2.73v0.00 1.82l-1.39 2.28l1.39 0.45l3.23 -2.27l3.70 0.46l-0.46 3.19l-1.39 3.19l-1.85 3.64h-2.31 0.00l-3.70 -0.91l6.01 5.01l1.85 2.73l1.85 4.55l5.08 3.19v0.00 2.27l-1.39 0.46l-4.16 0.91l-10.63 -4.10l-3.70 4.10l-6.01 -3.19l-1.85 2.73h-1.39 0.00l-5.08 -5.92l1.85 -2.73l-1.39 -2.73l-4.62 -0.46l-2.31 -2.27l0.93 -3.64l-1.85 -0.46l-4.16 4.10l0.92 -3.64l-0.46 -2.73l-2.77 -0.91l5.08 -0.91l-0.92 -4.10l1.85 -1.82L671.74 1134.05L671.74 1134.05z",
+          "id": "29",
+        },
+        "Patuakhali": {
+          "name": "Patuakhali",
+          "path": "M783.33 1282.46l1.31 -6.44l-4.58 -2.57l7.19 -7.72l1.96 -1.93l-1.31 -5.15l-9.80 0.64l-3.27 -1.93l-9.15 5.15l-1.31 -3.22l0.65 -6.44l8.50 -1.93l1.31 -3.86l-2.61 -5.79l5.23 -5.79l3.92 -0.64l1.96 -5.15l5.88 0.64l1.96 -5.79l9.15 -2.57l0.65 -4.50l4.57 4.50l3.92 5.15l-0.65 6.44l5.23 1.93l3.27 10.30l-4.58 2.57v0.00 5.79l-3.92 7.72l-2.61 7.08l-1.31 3.86l1.31 9.01l-11.77 3.86L783.33 1282.46z",
+          "id": "33",
+        },
+        "Pirojpur": {
+          "name": "Pirojpur",
+          "path": "M727.21 1273.31l-0.92 -6.83l-2.77 -3.64l0.46 -6.83l3.70 -6.37l-0.92 -4.10v0.00 -6.37l3.23 -3.64h1.85 0.00l-2.31 -2.27l-5.55 -8.65l6.47 3.64l4.16 3.64l-0.46 -4.10l-1.85 -5.01l2.31 -3.19l-2.31 -6.37v0.00 -6.83l-1.85 -1.82l-6.47 -0.91l-0.46 -5.01l7.40 -2.73v0.00 -7.74l-0.46 -1.82l0.92 -1.36l0.46 -3.19l6.93 0.91l2.31 -3.19h0.46 0.00l3.23 4.10l-0.46 4.55h2.31 0.00l2.77 4.10h2.77 0.00l0.92 2.73l6.93 1.36l3.23 0.91l-0.46 2.28l-1.85 0.46v0.00 2.27l-3.23 2.27l-0.92 3.64l-5.08 3.19l2.77 2.73v0.00 3.64l-4.62 0.91v0.00 9.10l7.39 1.37l0.92 0.91l-0.92 2.27l-4.62 4.55l-2.77 -2.28l-2.31 1.36l-2.77 -1.36l0.46 5.46l-2.77 4.10l0.46 3.64l2.77 -1.37l0.92 5.46l-1.39 2.73l-1.39 6.37l-3.23 5.92l-3.23 0.46l-5.55 5.92L727.21 1273.31L727.21 1273.31z",
+          "id": "34",
+        },
+        "Brahmanbaria": {
+          "name": "Brahmanbaria",
+          "path": "M834.43 1076.26l-5.55 -2.27v0.00 -1.36l-4.62 -3.64l1.39 -3.64l4.16 -5.01l0.46 -6.37l3.23 -1.82l1.39 1.82h4.16 0.00l1.39 -1.37l7.86 0.91v0.00 -3.19l2.77 -0.91l1.85 -7.74l3.70 -0.91l-2.31 -4.10l4.16 -5.92l5.08 -2.27l-0.46 -1.82l2.77 -2.73l-0.92 -4.55l-2.77 -0.46l-2.77 -5.01l3.70 -4.55l6.47 0.91l2.31 -3.64l7.86 -2.73l7.86 2.27l4.16 2.73l5.08 -7.28l3.70 0.91v0.00 2.73l-6.01 4.10l3.70 2.27v0.00 2.28l-4.62 -1.37l-0.46 5.46l2.77 1.82l-3.23 0.91l2.31 7.28l2.31 3.19v0.00 1.36l-1.85 0.91v0.00 3.64v0.00 1.36l-5.08 2.27l1.85 4.55l-3.70 0.91l-2.77 5.46l2.77 3.19l0.46 2.27l-2.31 1.82l-0.93 3.64l1.85 3.64l-2.77 3.64l-1.85 -1.37h-3.23 0.00l-2.31 1.82l0.46 5.46l2.31 0.91l1.39 -1.82l1.39 0.91v0.00 5.92h-1.85 0.00l-3.23 -2.73l-0.93 1.36l-3.70 -3.64v0.00 -3.64h-1.85 0.00l-0.46 -1.82l-3.70 -0.91l2.31 -1.82l-5.08 -4.10l-7.40 -0.46l-3.23 2.73h-5.55 0.00l-2.31 0.46l0.92 3.64l-4.16 0.91l-5.08 -3.64l-2.77 1.82l0.46 1.36l1.39 1.36L834.43 1076.26L834.43 1076.26z",
+          "id": "9",
+        },
+        "Barisal": {
+          "name": "Barisal",
+          "path": "M761.41 1229.62l6.01 -3.19l6.01 -2.73l1.85 -5.01h2.77 0.00l0.93 -1.36l5.55 1.36l0.92 -3.19h3.24 0.00l-0.46 -2.73l-5.55 -0.91l1.39 -2.73l2.31 0.46l-0.46 -2.27l-7.40 -0.91l-1.85 -2.27l-3.70 -0.46l0.46 -2.73l1.85 -1.36l-4.16 -5.01h-3.23 0.00l-1.85 -2.27l-6.01 3.64l-7.39 -1.36l-0.46 -1.82h-1.85 0.00l-2.77 -4.55h-3.23 0.00l0.46 -4.55l-2.77 -3.64v0.00 -5.46l4.16 -4.55l0.46 -2.27l4.16 -2.28l0.92 -2.27l4.16 -0.45v0.00 -5.46l5.55 0.46l1.85 -2.73l2.31 0.91l-0.46 10.92l6.47 2.73l3.70 -0.91l2.31 -1.36l2.77 1.82l1.39 -3.19l5.55 -2.73l6.47 1.37l6.47 3.64l4.62 4.10l5.55 2.27l5.55 2.28l4.16 3.64l2.77 6.37l-2.77 3.19l-4.62 2.27l-7.86 5.46l-4.16 4.10l-0.46 3.19l-5.55 0.91l3.24 5.01l-1.39 3.64l0.46 4.10l1.85 2.73l-5.55 0.46l-5.08 2.73v0.00 3.19l-0.93 3.19l-3.23 -0.91l-2.77 -0.46l-6.01 -2.73l-3.23 1.82l-0.46 2.28l-5.55 2.27l-0.46 -4.10L761.41 1229.62L761.41 1229.62z",
+          "id": "35",
+        },
+        "Habiganj": {
+          "name": "Habiganj",
+          "path": "M881.57 1003.44l2.77 -0.91l-1.85 -2.73l-1.85 -0.91l0.92 -2.73l5.55 0.46l3.23 -1.37v0.00 -3.19l-1.85 -2.27l3.23 -0.91l-0.46 -2.73l-3.23 -3.64l1.85 -2.27l0.46 -3.19l-0.93 -1.82l-2.31 -1.36l-2.77 1.36l-3.23 -1.36l6.47 -2.28l2.31 -6.37l4.62 -3.19l3.23 -3.19l3.24 3.64l1.39 -2.73l-1.39 -3.19l3.23 -4.55l6.01 -1.82h2.31 0.00l3.23 2.73l3.70 5.46l2.31 -3.64v0.00 -1.37l2.31 -1.82l1.85 0.91l7.39 -0.91l1.85 4.09l2.31 -0.91l-1.85 -2.28v0.00 -2.28l6.01 0.91l5.55 1.36l-2.77 4.10l4.62 0.46l0.93 2.27l-3.23 3.64l-3.23 -2.27l-2.77 -0.46l-1.39 0.91l2.77 4.55l2.77 1.82h-2.77 0.00l-3.23 2.27l-0.93 7.28l-0.93 13.20l2.77 7.74l-2.77 7.74l-1.85 1.36v0.00 1.36l2.31 1.82v0.00 1.82l-1.85 0.91v0.00 9.56l-6.01 3.64l-6.47 0.91l-4.16 -3.19h-5.08 0.00l-4.62 -2.28h-4.16 0.00l-0.93 2.73l2.77 3.64l-0.93 3.19l-2.31 3.19l-1.39 4.55l-6.93 -1.82v0.00 -3.19l1.39 -0.91l-0.93 -3.64l-3.70 -7.74l4.62 -1.36l-3.70 -1.82v0.00 -5.46l5.08 1.37v0.00 -2.73l-4.16 -1.82l6.47 -4.55v0.00 -2.73l-4.16 -0.91l-4.16 7.28l-3.70 -2.73L881.57 1003.44L881.57 1003.44z",
+          "id": "38",
+        },
+        "Rangamati": {
+          "name": "Rangamati",
+          "path": "M974.01 1214.60l-1.85 -9.10l4.62 -5.46l3.70 -6.37l0.92 -10.92l13.87 -10.01l-0.93 -5.46l-1.85 -10.01l8.32 -6.37l-1.85 -7.28l-2.77 -11.83v0.00 -6.37l-6.47 -9.10l8.32 -10.92l-3.70 -9.10l-6.47 -16.38l1.85 -2.73l7.40 -7.28h4.62 0.00l2.77 4.55l1.85 7.28l1.85 -6.37l1.85 -3.64l4.62 1.82l-2.77 6.37l1.85 6.37l1.85 4.55l1.85 16.38l4.62 6.37l2.77 5.46l-1.85 3.64l2.77 2.73l0.93 3.64l-6.47 4.55l0.93 7.28l0.93 6.37l0.92 4.55l3.70 4.55l-2.77 14.56l3.70 7.28l7.40 3.64l-1.85 4.55l2.77 10.92l5.55 5.46l0.93 7.28l1.85 9.10l-2.77 1.82l2.77 9.10l1.85 10.92l1.85 9.10v0.00 5.46l1.85 7.28l1.85 7.28v0.00 8.19l-4.62 -1.82l2.77 10.01l3.70 14.56l2.77 9.10l-3.70 6.37l-1.85 -4.55l-2.77 -8.19l-2.77 -9.10l-4.62 -9.10l0.92 -2.73l-1.85 -7.28l-3.70 -12.74l-3.70 -3.64l-9.24 -6.37l-12.02 -2.73l-8.32 3.64l-5.55 -4.55l-3.70 -5.46l2.77 -7.28l-0.92 -7.28l-4.62 -9.10l-5.55 -8.19l-2.77 0.91l-3.70 5.46l2.77 7.28l-1.85 3.64l-3.70 -4.55L974.01 1214.60L974.01 1214.60z",
+          "id": "10",
+        },
+        "Rajshahi": {
+          "name": "Rajshahi",
+          "path": "M539.56 978.87l1.39 -3.19l-3.23 -4.09l0.46 -5.92l-2.77 -3.19l0.46 -3.64l9.24 -2.73l5.55 -2.73l-0.46 -3.64l8.78 0.46l1.39 -1.36l-1.39 -2.27l-2.31 1.37l-3.23 -1.82l6.01 -3.19l6.93 2.27l0.46 3.64l2.77 0.91l2.77 -3.19l2.31 1.82l-0.46 5.01l4.16 1.82l10.17 -5.46l-0.46 -0.91l5.08 1.82l2.77 2.27l3.70 -0.46l3.23 3.19l3.70 -1.36v0.00 4.55l0.46 2.27l3.70 1.82h2.31 0.00v0.00 2.73l-0.92 2.27l-5.08 0.46l-2.77 2.27h1.85 0.00l2.77 2.73l-4.16 3.19l0.46 2.27l0.00 0.00l0.46 12.29l-4.62 3.19l-0.92 1.37l0.00 0.00l2.31 4.55l3.70 -0.91l0.46 2.73l0.92 2.28l1.39 1.36l-6.01 2.27l-1.85 1.82l2.31 1.82l-2.77 1.36l1.85 1.36l-1.85 1.36l5.08 0.91l0.92 1.82l-3.70 0.91l-0.46 1.82h-4.62 0.00l-6.47 -2.73l-4.16 -3.64l-1.85 -0.91l-3.23 -0.91v0.00 -1.82l3.70 -0.91l0.46 -9.56l-3.23 -6.83l-3.70 -0.46l-1.85 2.73l-6.93 -0.46l-4.16 -2.27l-3.23 2.73l-4.16 -2.27l-4.16 -4.10l-1.85 0.46l-0.46 -2.27l-4.16 -0.91l-4.62 -2.27L539.56 978.87z",
+          "id": "19",
+        },
+        "Noakhali": {
+          "name": "Noakhali",
+          "path": "M852.92 1182.75l3.70 -4.55l1.85 -7.28l-3.70 -4.55l-6.47 -4.55l0.92 -4.55l5.55 -10.01l7.40 2.73l7.40 6.37l7.39 -2.73l4.62 0.91l10.17 2.73l0.92 3.64l-0.92 4.55v0.00 3.64l-2.77 8.19l8.32 -0.91h4.62 0.00l-3.70 5.46v0.00 4.55l1.85 6.37l-5.55 -2.73l-5.55 1.82l-10.17 -0.91l-5.55 -3.64l-2.77 3.64c0.00 0.00 -2.77 2.73 -6.47 0.91C860.31 1190.03 853.84 1183.66 852.92 1182.75L852.92 1182.75z",
+          "id": "11",
+        },
+        "Narayanganj": {
+          "name": "Narayanganj",
+          "path": "M794.68 1082.63l-4.16 -6.37l10.63 -3.64l-5.55 -13.20l1.39 -3.19v0.00 -4.10l3.23 -8.65l2.77 0.91l0.46 -2.27l5.55 6.83l6.47 2.73l-3.23 3.19l0.93 2.73l5.08 -3.19l1.85 2.28l-3.23 3.19l4.62 1.37l5.55 1.82l-0.46 1.82l-1.39 4.10l-3.23 2.73l-0.93 4.10l-3.23 -0.91h-2.31 0.00l-0.92 3.19v0.00 4.55l-6.01 2.73l-2.31 2.27l-2.31 2.73l-3.70 -0.46v0.00 -2.73l-3.23 2.28l-2.77 -2.28L794.68 1082.63L794.68 1082.63z",
+          "id": "52",
+        },
+        "Sunamganj": {
+          "name": "Sunamganj",
+          "path": "M886.20 959.30v0.00 -3.64l6.47 -5.46l-2.77 -4.55l-6.01 -1.82l-3.23 -1.82l0.93 -4.10l2.77 -1.36l1.39 -3.19l-1.85 -3.19l-1.39 -0.91l-3.23 4.55l-1.85 -3.19l0.46 -3.64l-2.77 -4.10l-7.86 -0.91l-3.23 -4.10l-6.47 -0.91v0.00 -5.92l-1.85 -4.10v0.00 -5.01l2.31 -2.27l-4.62 -1.37l0.92 -1.82l4.62 -0.46l-2.31 -2.73l0.92 -8.65l0.93 -2.27l7.39 -1.36h5.08 0.00l6.47 1.36l12.48 -2.27l11.55 5.92l1.85 -2.27l5.55 1.82l6.01 3.64h4.16 0.00l1.85 -1.82l3.23 0.91l6.93 -3.64v0.00 3.64l2.31 0.46l1.39 2.73l6.93 -1.82l2.77 0.46l-0.92 2.73l3.70 3.19l0.46 4.10l-2.31 2.73v0.00 1.36l5.08 5.01l-0.46 1.82l-1.39 0.46v0.00 1.36l2.77 1.37v0.00 3.64l-2.77 5.46v0.00 1.36l2.77 3.64l-4.62 0.91l-2.31 2.73l2.77 5.92l-2.77 0.91l2.77 4.10l-4.16 8.19l-6.93 -0.91l-0.46 2.27l1.39 1.37l-1.85 1.36l-1.85 -2.28h-3.70 0.00l-6.01 -1.36l-1.85 1.82l1.85 1.82l-3.23 2.73l-6.47 -5.01l-0.46 -2.73l-3.70 -0.46l-4.16 3.64l-4.16 2.27l0.46 3.64l-0.92 2.27l-2.77 -1.82l-4.16 3.64l-3.70 0.91L886.20 959.30L886.20 959.30z",
+          "id": "39",
+        },
+        "Chuadanga": {
+          "name": "Chuadanga",
+          "path": "M575.15 1087.18l7.86 -5.92l2.31 0.45l1.85 -2.27l3.86 -0.83l3.21 -3.77l0.33 -8.59l3.67 -0.51l-0.90 -4.04l2.77 -2.27l2.31 1.82l0.95 -4.13l2.28 2.30l5.33 0.46l-3.02 2.73l3.70 1.37l0.98 2.11l2.72 3.35l0.92 -2.28l2.31 -2.27l1.85 2.27l0.52 10.33l-0.06 6.05l-1.39 5.01l-1.19 1.58l-2.97 0.69v0.00 1.36l1.85 1.36l-0.46 2.27l-5.08 -0.91l-2.77 0.91l2.16 0.52l1.53 3.12l-0.46 6.37l-2.31 0.91l2.69 1.52l1.01 2.12l-4.98 3.83l-4.27 0.16l-0.46 4.20h-3.23 0.00l-2.64 -2.06l-2.91 1.15h-4.16 0.00l-1.39 -1.36v0.00 -5.46l1.39 -4.10l2.77 0.91l-0.35 -3.02l1.09 -2.70l-1.20 -1.20l-2.31 -0.35l2.01 1.95l-3.40 2.60l-1.85 -1.82l0.46 -1.82l-1.61 -1.47l-3.50 -1.73l-5.99 -4.54l1.39 -3.19L575.15 1087.18z",
+          "id": "21",
+        },
+        "Kushtia": {
+          "name": "Kushtia",
+          "path": "M580.69 1013.45h5.08 0.00l4.62 4.10l6.47 3.64l5.08 0.46l5.08 0.91l1.85 -3.19l3.70 2.27h6.01 0.00l2.77 5.01l-0.92 4.10l1.39 4.10l1.85 0.46l2.31 0.46v0.00 2.73l4.16 1.82l1.39 3.64l1.85 -2.28l2.31 1.36l2.77 3.19l6.47 -0.46l-4.62 -4.10l5.55 -1.36l5.08 3.64l-3.70 1.36l0.46 2.73l4.16 3.19l2.77 1.82l2.77 -0.46l1.85 0.91l-0.46 4.10l-0.46 6.37l-3.23 3.64l0.92 2.27h-3.23 0.00l-5.55 -3.64l-1.39 -0.46l-0.92 2.73h-4.16 0.00l-2.31 3.19l-2.77 -0.91l-3.70 3.19l-0.46 -4.10h-2.77 0.00l0.46 -2.73l-3.24 -0.91l-0.46 1.82l2.31 3.19l-3.23 0.91l-0.27 3.08l-3.43 1.47v0.00 -5.92l-0.46 -4.09l-1.85 -2.28l-1.85 1.37l-2.31 3.19l-2.31 -5.46l-3.70 -0.91l2.31 -2.73l-4.16 -0.91l-3.23 -2.27l1.85 -1.82v0.00 -1.82l-2.77 0.46l-1.85 -1.36l3.23 -1.82l-1.39 -3.64l-1.85 -2.27l-3.23 1.82l-1.39 -4.55l-1.39 -1.82h-1.39 0.00v0.00 3.64l-5.08 -5.46h2.77 0.00l1.85 -0.91l-2.77 -2.73l-2.31 0.46l-1.39 0.91l-0.46 -2.73l3.23 -0.91l-4.16 -2.27l2.77 -1.36l-5.55 -4.10L580.69 1013.45z",
+          "id": "22",
+        },
+        "Magura": {
+          "name": "Magura",
+          "path": "M650.94 1118.58l-2.31 -1.36v0.00 -2.28l3.23 -5.46l2.31 0.46l3.70 -4.55v0.00 -5.46l-0.46 -4.55l1.39 -3.64h3.23 0.00l0.92 -1.36l-2.31 -0.46v0.00 -3.19h1.39 0.00v0.00 -1.82l-1.85 -1.82l0.46 -1.82l2.31 0.91l0.92 -1.82l-0.46 -2.73l0.46 -1.36l6.01 0.46l0.92 2.27l4.62 3.64l1.39 4.55l1.85 2.27v0.00 3.19l1.85 2.27l1.85 0.91v0.00 1.82h-2.31 0.00l-1.85 1.36l0.46 1.36h6.93 0.00l3.70 2.27l0.92 3.19h1.39 0.00v0.00 5.01l3.23 5.01l0.92 2.73l-4.16 -2.73l-1.85 1.82l2.31 0.91v0.00 5.92h-5.55 0.00l-2.31 4.10l-2.31 0.91l-3.24 -4.10l-1.85 0.91l-2.77 3.64l-1.85 0.91h-0.92 0.00l-2.31 -2.73l-1.39 0.46l-2.77 -3.19h-0.46 0.00l-0.92 0.91h-2.31 0.00l-2.31 -1.82l-0.46 -2.73l-2.77 0.46L650.94 1118.58L650.94 1118.58z",
+          "id": "23",
+        },
+        "Natore": {
+          "name": "Natore",
+          "path": "M602.41 1021.19v0.00 -2.27l4.62 -0.46l-0.92 -2.28l-6.01 -0.91l1.85 -1.82l-1.85 -0.91l2.77 -1.36l-1.85 -2.73l7.39 -2.73l-2.31 -3.64v0.00 -2.73l-4.62 0.46l-1.85 -4.55l6.01 -4.10l-0.92 -14.56l4.62 -3.19l-3.23 -3.19h-2.77 0.00l4.16 -2.73l4.62 0.91l1.85 -3.64l-0.46 -1.82h3.23 0.00l-0.46 2.27l2.77 2.28l3.70 0.46l3.23 0.46l4.16 -2.73l0.46 -5.01h-1.85 0.00v0.00 -4.10l3.70 -4.55l3.23 5.46l1.85 -4.55l1.85 0.91l2.77 -2.73l1.39 1.82l-2.77 3.19l5.55 4.10l0.46 -1.82l-1.85 -2.27l2.31 -2.27l4.16 0.91l2.77 2.27l2.77 2.28l1.39 3.19l1.39 1.36l-7.86 10.47l-4.62 5.46l2.77 1.36l0.92 2.73l2.31 1.36l0.46 8.65l-3.70 3.64v0.00 2.27l-2.31 -0.46l-4.16 8.19l-3.23 1.82h-2.77 0.00l-1.39 3.19l-4.16 3.19l-8.32 1.82l-1.85 -1.82l-1.39 -0.46l-1.85 3.19v0.00 3.19l-5.55 -0.46l-4.62 -1.36l-1.85 2.28L602.41 1021.19z",
+          "id": "12",
+        },
+        "Lalmonirhat": {
+          "name": "Lalmonirhat",
+          "path": "M621.37 740.40l-1.39 -3.64l-3.70 2.73l-1.85 -2.73l2.77 -2.27l-1.39 -2.27l-2.31 -0.46l-1.39 1.36l-4.62 -2.28l-0.92 -4.09l4.62 -6.83l4.16 -1.36v0.00 2.73l1.39 0.91l4.16 1.37l2.77 2.73l6.01 -0.46l1.39 3.19l-2.77 0.46l2.31 2.73l-2.31 2.73h5.55 0.00l1.85 3.19l-0.46 1.36h-2.77 0.00l-2.77 -2.73v0.00 4.10l2.31 2.73l3.70 4.10l0.46 2.73l-1.39 1.36l4.16 8.19l7.39 1.36l3.70 3.64l0.46 2.73l-1.85 0.91l0.46 0.91l3.23 0.46l3.70 1.82l3.23 3.64l6.01 1.36l2.77 -5.01l1.85 0.46l0.46 2.27l2.31 0.91l1.85 1.82l1.85 -1.36l-0.92 8.65l3.70 0.46l5.08 5.46l0.92 -0.46v0.00 2.73h4.16 0.00l0.46 1.36l-4.16 5.46l-2.31 0.46l0.46 5.46l-5.08 3.64l-1.39 -0.46l-0.46 -4.10l-1.39 0.46l-0.92 2.27l-3.70 -0.46l-2.77 -0.91l-0.46 0.91l-9.24 -5.46c0.00 0.00 2.31 -2.73 0.00 -3.19c-2.31 -0.46 -4.62 -1.82 -4.62 -1.82v0.00 -3.19l-2.77 0.46l-4.16 -3.19l-4.62 -1.82l-2.77 -3.19l-5.93 -1.93l-2.85 -4.44l-2.31 -10.47l1.39 -6.83v0.00 -2.73l-7.39 -4.55l0.46 -9.10l3.70 -1.37l-2.31 -3.19L621.37 740.40z",
+          "id": "53",
+        },
+        "Nilphamari": {
+          "name": "Nilphamari",
+          "path": "M589.94 739.03l2.31 -2.27l2.31 0.46l2.31 1.82l-1.85 5.01l2.77 0.91l2.31 2.73l2.77 -0.46l-0.46 -3.19l-2.31 -1.36l2.77 -3.19l5.08 0.46l2.31 3.19l1.85 2.28l1.39 2.27l0.92 -1.36h4.16 0.00l0.92 0.91l2.77 -1.36v0.00 3.19l0.46 5.46l3.23 2.27l3.24 1.82l0.92 2.27l-0.46 2.73l-0.92 6.83l1.39 4.55l0.92 5.01l3.70 3.19l4.16 2.73l3.23 2.73l-1.39 3.64l-1.39 3.19l-1.39 1.82l-2.77 -3.19l-4.62 4.10l0.46 5.01l-3.70 -3.64l-2.31 4.55l-7.39 -1.82l-5.08 1.37l1.85 4.55l-2.31 2.73l-1.39 2.27l-4.16 -0.46l-3.70 -3.19h-2.31 0.00v0.00 -5.01l-3.70 -0.91v0.00 -10.92l-1.85 -2.27l-1.85 -3.19l-5.08 -1.36l0.46 -2.28l-1.39 -0.91v0.00 -3.64l-0.46 -1.36l1.85 -2.27l-1.39 2.27l2.77 -4.10l2.77 -1.36v0.00 -7.74l1.39 -2.73v0.00 -1.82l-0.46 -6.37l1.39 -2.73l-5.08 -5.46z",
+          "id": "54",
+        },
+        "Gaibandha": {
+          "name": "Gaibandha",
+          "path": "M643.09 876.47l7.86 2.73l3.70 -1.82l0.92 -3.19l-3.70 -5.01l10.63 0.46l-4.16 -4.10l3.23 -0.46l-2.31 -3.64l6.47 -10.01l2.31 -2.73l2.31 0.91l3.70 -5.01l-3.23 -1.82l0.46 -4.10l-4.16 -3.19l1.39 -2.27l3.70 -1.36l3.70 0.91l0.46 3.64l3.70 -1.82l-2.31 -3.19l5.55 -3.19l3.70 5.01l3.23 2.27l1.85 4.10l1.39 -2.73h2.77 0.00l3.70 3.19v0.00 1.82l2.31 2.27l-4.62 2.28l6.93 1.36l-1.39 1.36v0.00 4.10l0.92 0.91l-1.39 0.46v0.00 2.27l3.70 0.46l1.85 -1.82v0.00 2.27l1.39 0.91v0.00 7.28l2.31 5.01l0.46 3.19l-3.23 4.55l-2.31 -0.46l-3.23 2.73l-0.46 4.10l-3.23 4.55l-2.77 3.19v0.00 2.27l1.39 2.27l1.85 0.46l-2.31 1.36l-0.92 2.73l-0.92 -1.82l-5.08 -0.46l-4.16 1.36l-0.93 2.27h-2.31 0.00l-0.92 -1.82l-6.93 -1.36l-1.85 -2.27l-1.39 -0.46l-1.39 1.82l-2.31 -1.36l-1.39 -0.46l-0.93 1.82l-3.70 -0.46l-1.39 -4.55h-1.85 0.00l-1.39 -1.36l-5.08 -0.46l-1.85 2.27l-2.77 -2.27v0.00 -1.36l-3.70 -5.01h-1.39 0.00l-1.85 -2.27l-0.93 -2.28L643.09 876.47z",
+          "id": "55",
+        },
+        "Jaipurhat": {
+          "name": "Jaipurhat",
+          "path": "M619.52 922.44l-0.46 -8.19l0.92 -0.91l0.46 -10.01l-2.77 -2.73h-2.31 0.00l-0.92 1.82h-1.85 0.00l-1.85 -3.64v0.00 -2.27l1.39 -0.46l0.46 -6.83l-2.77 -0.46l1.39 -0.91l-1.85 -3.64l2.31 -2.27l-0.46 -3.19l0.92 -6.37l5.55 -1.82l1.85 0.46l4.16 3.19l5.08 -0.91l2.31 3.19l6.47 -0.91l5.08 1.82l-1.85 3.64l2.31 3.64l2.31 1.82l3.23 4.55l-0.46 1.36l4.16 2.73v0.00 1.82l-2.77 2.27l-1.85 0.91l1.85 2.73l-2.77 0.91l0.93 1.82l-2.77 -1.36l-2.31 6.37h-1.85 0.00v0.00 3.64l1.39 1.37l-0.46 1.82l-2.31 -0.46v0.00 -1.36h-5.08 0.00l-0.46 -3.19l-3.23 -1.36l-0.46 6.37h-1.39 0.00l0.46 1.82l2.77 1.82v0.00 1.36l-4.16 2.73l-1.39 0.91l-2.31 -1.82l-2.31 2.73v0.00 -1.82h-2.31 0.00v0.00 1.82l-0.92 -1.36h-3.23 0.00v0.00 -2.73L619.52 922.44z",
+          "id": "15",
+        },
+        "Bhola": {
+          "name": "Bhola",
+          "path": "M807.51 1277.31l5.88 -6.44l5.23 -7.72l0.65 -11.58l-0.65 -8.37l-2.61 -7.08l-2.61 -7.08v0.00 -7.08l-4.58 -3.86l-4.58 -5.15l0.65 -5.79l3.92 -6.44l5.88 -3.22l2.61 -3.22l9.15 -0.64l1.96 7.08l3.92 14.16l6.54 7.72l4.58 5.79l2.62 3.86l-0.65 7.08l-1.96 1.93v0.00 8.37l-2.61 5.79l-1.31 4.50l-1.31 5.79v0.00 5.79v0.00 4.50l-4.58 3.22l-2.61 5.15l-7.84 2.57l-0.65 3.86l-3.92 1.93l-5.23 3.22c0.00 0.00 -1.96 -0.64 -1.96 -3.22s-1.96 -5.79 -1.96 -5.79l3.27 -4.50L807.51 1277.31L807.51 1277.31z",
+          "id": "32",
+        },
+        "ChapaiNawabganj": {
+          "name": "ChapaiNawabganj",
+          "path": "M559.43 942.00l-2.77 -2.27l-3.23 -0.91l0.46 -1.82l6.47 1.36l-1.39 -2.73h-4.16 0.00l-4.16 -1.82l2.31 -2.73l-4.16 -0.91l-1.85 1.82l-3.70 -1.82l0.92 -3.19l3.70 1.36l0.92 -1.82l5.08 0.46l1.39 -1.82l3.70 -5.92l-4.62 -4.55l-1.39 4.10l-2.77 0.46l0.92 -4.55l-2.77 -3.19l-2.77 -0.46l-1.39 3.19l-5.55 -0.46l-0.92 3.64h-1.39 0.00l-0.46 1.82h3.23 0.00v0.00 2.27l-1.85 2.73l-0.92 -2.73l0.00 0.00l-2.31 2.28l-0.92 -2.28l-2.77 -1.82l-1.39 2.73l1.39 -4.55l-4.62 -3.19l0.46 -2.73l-3.23 -0.46l-0.46 1.36h-3.70 0.00l-3.70 2.27l-0.46 2.27l2.31 2.27l0.92 6.37l-8.32 5.46l0.92 3.64l-2.77 -0.46l-1.39 1.36l-0.46 3.64l-0.46 3.19l-0.46 2.27l-2.31 -0.46l-2.31 1.36l1.39 1.36l2.31 1.82l-0.46 1.82l5.08 3.19l-0.46 2.73l2.77 2.73l-1.39 4.10l1.85 3.64l2.31 2.73h3.23 0.00l2.77 2.73l1.85 2.27l3.24 -0.46l11.55 3.64h4.62 0.00v0.00 -2.28h-0.46 0.00l-2.31 -3.64v0.00 -6.37l-2.31 -2.73v0.00 -4.09l5.55 -2.73l3.70 -0.46l0.00 0.00l5.08 -3.19l-0.46 -3.64h9.71 0.00l0.92 -0.91l-1.85 -1.37l-1.85 0.91l-3.23 -1.82L559.43 942.00z",
+          "id": "13",
+        },
+        "Thakurgaon": {
+          "name": "Thakurgaon",
+          "path": "M515.06 806.39l-2.31 -4.10l-2.77 -3.64l1.85 -4.10l-4.62 -0.91l1.39 -7.28l3.23 -2.27l-0.46 -2.73l1.85 -3.64l5.55 -3.64l1.85 -5.01l-4.16 -2.27l2.31 -4.10l0.93 -4.10l5.08 -1.82v0.00 -4.55l6.93 0.91l5.08 -1.36l6.93 4.55l1.39 -3.64l4.72 -0.98l4.06 1.43l3.70 -0.46l9.24 2.28l3.70 4.10l3.23 1.36l4.62 5.46l-3.23 4.55l0.92 3.19l-2.31 2.27l-0.92 0.00l-2.31 -3.64l-1.39 2.73h-2.77 0.00l-1.39 5.01l1.85 1.82l-2.31 0.46l-2.77 4.55l-0.92 2.73l-1.39 2.73l1.85 2.27l-2.77 0.46h-1.85 2.27l-2.77 -2.27l-6.01 0.46v0.00 3.64h-2.31 0.00l-0.46 4.55l2.77 1.37l-1.85 1.82v0.00 4.10l2.31 1.36l2.77 2.27l-0.46 3.19l-3.23 0.46l-2.77 -2.73l-2.31 -1.36v0.00 -1.82l-3.23 -3.19h-2.77 0.00l-0.92 -3.19l-5.08 -2.73l0.46 -2.27l-0.46 -1.36l-4.16 1.36l-2.77 2.27l-2.31 -2.73L515.06 806.39z",
+          "id": "56",
+        },
+        "Sherpur": {
+          "name": "Sherpur",
+          "path": "M748.00 925.17l-0.46 -3.19l-7.40 -1.82l-6.47 -2.28l0.92 -2.73l-2.31 -2.73l-2.31 0.46l-0.46 -2.73l-2.31 -3.19l-1.39 -3.64l3.23 0.46v0.00 -2.27l2.77 -1.82l0.46 -2.28l-3.23 -2.73l-0.92 -3.19l2.31 -2.73l0.46 -3.64l-3.70 0.46l-1.39 -2.73l3.70 -2.73l0.92 -6.37l1.85 2.27l1.85 -1.82v0.00 -6.83l3.23 2.73l4.62 2.73l2.31 1.36l6.01 2.27l5.08 1.36l6.93 0.91l5.08 2.28h3.23 0.00l1.39 2.27v0.00 4.10l0.46 5.01l-0.93 3.19l5.55 2.73l-1.85 3.19l-4.62 -0.91l-3.23 4.55l2.77 2.28l-1.85 2.73l1.39 3.64l3.23 1.82l-1.85 0.91l-2.77 -0.91l0.46 2.27l2.31 1.82l-2.31 4.55l-6.01 -0.46l-3.70 -1.82l-5.08 -2.28L748.00 925.17L748.00 925.17z",
+          "id": "61",
+        },
+        "Tangail": {
+          "name": "Tangail",
+          "path": "M713.34 1032.11l3.70 -5.92l-0.46 -5.46l-1.85 -4.10l-2.77 -0.91v0.00 -1.82l1.39 -1.36l-1.39 -1.82l0.93 -5.46l0.46 -8.19l-6.47 -6.83l3.23 -4.10l-6.47 -5.92l4.16 -4.55l0.93 -5.46l-3.23 -2.73l3.23 -2.27l1.39 0.91l2.31 -3.64l4.16 1.37l0.46 -2.28l1.85 -3.19l1.39 -2.27l0.92 -2.28l1.85 -1.36l2.31 -3.19l2.31 0.46v0.00 -1.82l-3.24 -2.73l-0.46 -2.27l0.46 -2.27l1.39 1.82l4.62 -2.73l0.46 -2.73l2.77 1.37l3.70 5.01l5.55 -8.19l4.62 -1.82l2.77 1.36l0.46 4.10h4.16 0.00v0.00 7.74l3.70 5.46v0.00 2.27l-2.31 3.19l-0.46 2.73l3.23 7.28l9.71 5.92l-2.31 0.91l-1.39 3.19l4.16 7.28l0.46 3.19l-1.39 2.28l3.23 8.19l3.23 1.37l2.31 0.91l0.93 1.36l-3.70 1.82v0.00 4.10l-2.77 0.91l-2.31 1.82l-1.85 5.00l0.46 6.83l-3.23 0.46l-1.85 -1.82l-0.46 2.27h-1.39 0.00l0.46 3.19l-5.08 5.01l-3.70 2.28h-1.39 0.00l-4.16 -2.73l-2.77 2.73h-1.39 0.00l-2.77 -1.82v0.00 3.19l-2.31 2.28l-0.93 -3.64l-1.85 -0.91l-4.16 4.55l-2.77 0.91l-2.31 2.27l-1.39 -2.73l-1.85 3.19h-2.77 0.00l-2.77 -2.27l-0.92 1.36l-1.85 -2.73L713.34 1032.11L713.34 1032.11z",
+          "id": "43",
+        },
+        "Rangpur": {
+          "name": "Rangpur",
+          "path": "M651.41 869.19v0.00 -3.64l-6.01 -4.10l1.39 -2.27l-3.70 -0.91v0.00 -1.82l-4.62 -0.46l-3.70 -3.19l2.31 -0.46l-6.01 -3.19l-3.70 -16.84l-7.39 -1.82l-3.23 -7.28l-5.55 -3.19l-1.85 -7.28l4.62 -4.55l-1.39 -4.55l5.08 -1.37l7.86 1.37l1.39 -3.64l4.62 3.64l-0.46 -5.46l4.62 -4.55l1.85 3.64l5.55 -8.19l6.93 4.55h3.23 0.00v0.00 3.19l5.08 1.82l1.85 4.10l7.40 4.55l0.92 -1.82l5.55 2.73l1.39 1.36l-0.46 1.36l4.16 0.91l1.39 1.82l-4.16 1.82l3.70 1.36l1.39 1.82v0.00 3.19l-1.39 0.91v0.00 2.27l2.77 1.36l0.46 1.36l-1.85 1.36l-3.70 2.73l1.39 2.27l-2.31 1.36l-1.39 -2.27l-2.77 -0.91l-0.46 1.37l-3.70 -0.46l-1.85 2.27l4.62 4.10l-0.46 3.19l2.77 1.82l-3.24 4.10l-3.23 0.46l-3.23 3.64l-4.62 8.65v0.00 0.91l1.39 2.27l-2.31 0.91l5.08 3.64H651.41",
+          "id": "58",
+        },
+        "Naogaon": {
+          "name": "Naogaon",
+          "path": "M614.89 926.08v0.00 -3.19l4.62 -0.46l-0.92 -8.19l1.85 -0.46l-0.46 -9.56l-2.77 -4.55h-0.92 0.00l-1.85 2.28l-2.31 0.46l-2.31 -4.10v0.00 -1.82h1.85 0.00l1.39 -7.28h-5.08 0.00l2.77 -0.91l-2.77 -3.64l1.85 -2.27l-3.70 -0.46h-1.85 0.00l-6.01 -3.64l-1.39 3.19l-3.23 2.28h-0.92 0.00l-2.31 -2.73l-2.31 1.36l-5.55 -3.19l-3.23 -0.91l-0.93 1.82l-8.78 -0.46l-2.31 4.55h-2.31 0.00v0.00 -2.73l-1.39 -1.36l-1.39 1.82l-1.85 -2.27h-2.77 0.00l-2.31 -1.82l-0.93 1.82l-3.23 1.36l0.00 0.00l-0.46 3.64l3.70 1.82v0.00 1.36l-3.23 1.36v0.00 6.37l0.92 1.36l-2.31 -0.46l-0.46 4.10l2.31 1.82l-1.85 2.27l-2.31 1.36v0.00 2.73l-2.31 0.46v0.00 1.82h3.23 0.00l2.77 2.73l0.46 5.01h1.39 0.00v0.00 -1.82l0.46 -1.82h1.85 0.00l3.23 3.19v0.00 1.82l-3.23 5.46l-2.31 0.91l-3.70 0.46l-0.46 1.36l-4.16 -0.91l-1.39 2.73l3.24 1.82l1.85 -0.91h5.55 0.00l-1.85 2.73l2.31 0.91l4.62 0.46l1.39 2.73l-2.31 0.46l-2.31 -0.91h-1.85 0.00l-0.46 1.36l3.23 0.91l2.77 1.36l0.46 1.36l2.31 1.36l5.08 1.36v0.00 3.19l2.31 0.91l2.77 -3.64l2.31 3.19l-0.46 5.01l1.85 1.82l0.46 -0.91h2.31 0.00l2.77 -1.36l6.47 -4.55h1.85 0.00l0.46 1.82l3.23 -0.46l0.00 0.00l2.31 2.73l0.92 -0.91h3.23 0.00l2.77 3.19l0.46 -0.91l2.77 -0.46l1.39 1.82v0.00 4.55l2.31 1.82l2.31 0.46l5.08 0.46v0.00 2.73l0.92 0.91h1.85 0.00l0.46 -1.36v0.00 1.82h2.77 0.00l0.92 2.73l1.85 -2.27l1.39 0.46l3.23 -2.73v0.00 -4.55l-1.39 -0.91v0.00 -3.19l3.70 -5.46l1.39 -2.28l-0.46 -4.10l0.92 -3.64l-2.31 1.82l-5.08 0.46l0.46 -4.10l-3.23 -5.46h-0.92 0.00l-3.70 3.64l-1.39 -0.46l-4.16 3.64l-0.46 -10.01l-1.85 -0.91L614.89 926.08z",
+          "id": "16",
+        },
+        "Mymensingh": {
+          "name": "Mymensingh",
+          "path": "M775.73 1000.26l-4.16 -1.82l-3.70 -7.74l1.85 -1.82v0.00 -4.55l-4.62 -6.83l0.92 -3.19l3.23 -0.91l-6.93 -3.64l-2.77 -2.73l-3.70 -6.37l0.46 -2.73l2.77 -3.19v0.00 -2.27l-4.16 -5.92l0.46 -7.74l-4.16 -0.46l-1.39 -3.64l4.62 -0.91l4.16 0.91l4.16 -5.01v0.00 -4.55l2.31 -1.36l3.23 0.91l3.23 -4.10l-3.23 -2.27v0.00 -2.73l2.77 0.91l2.77 -0.46l-3.70 -1.82l-1.85 -4.10l1.85 -2.73l-2.31 -2.27l3.23 -4.55l4.62 1.82l1.85 -3.64l-3.70 -1.36l-1.85 -2.27v0.00 -2.27v0.00 -9.10l-0.46 -1.82l2.31 -0.46l2.31 1.82h4.16 0.00l1.39 2.73l9.71 1.82l4.62 -1.82l5.55 -2.27l6.01 0.91l2.31 -1.36l3.70 1.82l3.23 -2.73l2.31 1.37l-0.93 2.27l-2.31 6.37l-0.46 3.64l-2.31 1.82l3.70 4.09l-0.46 2.73l-3.23 0.46l-1.85 2.73l-0.93 3.64l-1.85 0.46l-1.85 -5.01l-1.39 1.82l-2.77 -0.91l-1.39 0.91l3.70 2.73l0.92 3.64l-0.92 2.73h0.92 0.00l2.31 4.55h3.23 0.00l-0.46 5.01l2.31 1.82l-1.39 1.82h3.23 0.00l3.23 2.73l4.62 0.91l1.85 -1.36l4.16 1.36l-0.93 2.73l-2.31 -0.46l0.93 3.19l1.85 0.91l0.93 0.91l-2.31 2.73l-0.46 4.55l3.70 3.19l3.23 1.82l0.92 5.92l2.77 -1.82l0.46 1.82l3.70 2.27l0.92 1.82l-2.77 4.55l-3.23 3.19l-3.23 -1.37l-1.85 -3.19l-2.77 5.46l-1.85 -3.64l-2.77 5.01l-3.70 0.46l-3.23 -2.73h-4.16 0.00l-1.39 3.64l4.16 3.19l4.62 2.73l-0.46 5.92l-2.31 1.82l-0.46 4.10l2.31 5.00l1.39 2.73l-3.23 -0.91l-4.16 1.82h-4.62 0.00l-3.70 -2.73l0.46 -2.73l-6.47 -2.27l-0.46 -1.82l-4.62 -0.46l-1.85 7.28l-1.85 -0.91l-2.31 0.91l-2.77 -3.19l-1.39 2.73L775.73 1000.26L775.73 1000.26z",
+          "id": "62",
+        },
+        "Khulna": {
+          "name": "Khulna",
+          "path": "M659.96 1202.54l-1.62 0.68l-0.69 3.41l-2.31 -1.14l-0.93 -2.50l-2.54 4.10l1.85 2.05l3.00 0.23l1.16 2.73l-2.77 3.64l-2.31 -3.87l-3.00 2.73l-0.23 9.79l4.39 8.65l-4.39 2.27l-0.46 8.42l4.39 3.41l-2.54 1.59l-0.23 2.50l4.85 7.74l-2.08 10.92l-6.47 11.60l7.63 -0.23l-3.00 3.19l8.09 17.07l1.85 4.55l3.00 0.91l0.23 2.96l-4.85 0.91l-3.70 6.14l2.08 1.82l1.39 4.10h2.08 0.00l0.69 3.64l1.39 4.55l5.78 0.46l3.47 -5.23l1.85 -1.14l1.85 -3.41l-0.92 -2.05l-1.16 -2.73l-4.39 -2.73l3.47 -1.82l6.24 -6.37l0.46 -5.01l0.23 -5.69h1.85 0.00l3.23 -11.83l0.23 -9.33l-2.08 -8.65l6.24 -6.14l1.39 -2.96l2.08 -0.46l2.77 -4.55v0.00 -5.69l-4.16 -12.06l-2.31 -1.14v0.00 -5.46l-3.23 -6.83l-0.92 -7.74l1.85 -4.32l3.70 -3.64l2.31 -7.96l1.85 -1.59l1.62 1.14l3.47 -3.41l1.62 -3.19l-0.69 -3.64l-1.39 -1.37v0.00 -2.96l4.85 -0.23l3.00 -2.50l1.85 -9.56l-10.63 -3.64l-4.62 4.10l-5.32 -3.19l-2.31 2.96l-2.31 1.36l-5.32 -0.68l-2.08 -1.36l-3.70 -7.05l-3.47 1.36l1.16 3.64l-3.47 4.10l-5.78 2.73l-0.69 1.82l1.85 2.05l-0.46 8.88l-5.31 -2.50l0.46 -2.28l-2.08 -0.91l-0.23 1.59l-4.16 3.64l-3.00 -0.46l3.23 5.46l4.62 2.05l3.47 5.92L659.96 1202.54L659.96 1202.54z",
+          "id": "20",
+        },
+        "Chandpur": {
+          "name": "Chandpur",
+          "path": "M812.71 1163.63l-4.62 -7.74l-1.85 -4.55l2.31 -6.37l3.23 -5.46l4.16 -4.55l1.39 -4.55l-1.85 -3.64v0.00 -3.19l-3.23 -1.82l-3.23 -0.91v0.00 -3.19l-2.77 -1.36l2.31 -4.55l0.92 -4.55l0.46 -3.64l4.62 -1.36l3.23 -1.36l2.77 -0.46l5.08 4.55l0.46 3.19l5.08 2.27l2.31 -3.19l1.85 1.82l4.62 -5.92l7.86 2.27l0.93 5.92l4.16 2.73l0.46 4.10l4.62 4.10l4.16 5.46l-0.46 3.19l3.70 3.19l-2.77 2.73l0.46 5.92l-1.39 3.19h-3.23 0.00l-1.85 0.91l-2.77 -1.82l-5.08 0.46l-2.31 -3.64h-2.31 0.00l-2.77 1.36l-1.39 4.55l-0.92 3.19l-6.47 2.27h-2.31 0.00l-4.62 2.73h-0.92 0.00l-1.39 -2.73h-1.39 0.00l-1.39 1.82l-0.46 4.55v0.00 2.27l-2.77 3.19L812.71 1163.63L812.71 1163.63z",
+          "id": "1",
+        },
+        "Kishoreganj": {
+          "name": "Kishoreganj",
+          "path": "M824.73 1005.72l-5.08 -4.55l-1.39 -5.01l-0.92 -2.73l-0.46 -3.64l3.23 -1.82l0.46 -5.92l-9.24 -6.37l1.39 -1.82v0.00 -2.28l3.70 0.46l3.70 3.19l3.23 -0.46l3.24 -4.55l2.31 2.27l1.85 -4.55l3.70 3.19l4.16 -1.82l3.23 -4.55l2.31 -3.64l10.17 -1.82l-6.47 0.91l5.08 -0.91h6.01 0.00l3.23 0.91l4.62 -3.19l4.62 0.91l1.85 3.19l5.08 -3.19l2.77 -2.28h5.08 0.00l-0.92 3.64l4.16 4.55v0.00 3.19l-1.39 2.27l-0.46 1.36l-6.47 3.64l3.70 0.91l0.92 -1.36l3.23 0.91l1.85 3.64l-0.46 2.27l-3.23 1.82l4.62 3.19l0.93 2.73l-3.23 0.46l-1.39 1.82l2.31 1.82v0.00 1.82v0.00 0.91l-3.23 0.91l-5.55 0.46l-1.39 2.27l2.77 1.37l0.93 1.82l-2.31 1.36l-5.55 1.36l-5.55 1.36l-1.39 3.64l-6.01 -0.46l-4.62 4.55v0.00 1.36l2.77 3.19l3.70 0.91l0.92 3.19l-0.92 2.27l-2.31 1.82c0.00 0.00 2.77 1.37 -0.46 2.28c-3.23 0.91 -4.16 1.36 -4.16 1.36l-2.31 -2.27l-1.39 -3.19l-4.16 0.46l-2.77 -3.19h-3.70 0.00l-0.46 -3.64l2.77 -2.27l-5.55 -1.36l-1.39 -3.64l-3.23 -0.46l-2.31 -4.55l-2.77 -2.73l-1.39 0.46l-0.92 0.91L824.73 1005.72L824.73 1005.72z",
+          "id": "44",
+        },
+        "Jamalpur": {
+          "name": "Jamalpur",
+          "path": "M697.16 892.86l6.47 -6.83l-0.46 -4.10l3.23 -3.64l3.23 0.46l2.77 -3.64l-0.46 -4.55l-2.31 -4.10v0.00 -7.74l4.62 -3.19l-2.31 -1.37v0.00 -3.19l5.08 3.64l-1.39 7.28l2.77 2.73l-0.46 3.64l3.23 2.28h3.23 0.00l2.31 -3.19l4.16 0.91l2.77 -0.46v0.00 6.83l-0.92 0.91l-2.77 -1.82l-1.39 6.37l-2.77 2.73l1.39 3.19l3.70 -0.46l-0.46 2.27l-1.85 2.28l-0.46 3.64l4.16 3.19l-0.46 2.73l-3.23 1.82l0.46 1.82h-2.31 0.00v0.00 2.27l2.31 4.55l0.46 2.73l2.77 -0.46l2.31 2.73l-0.92 2.73l3.23 1.36l10.63 2.73l0.93 3.19l6.01 -5.01l8.78 4.09l-0.46 5.46l-4.16 4.55l-3.23 -0.46h-7.39 0.00l-4.16 0.91l-6.93 8.19l-2.31 -3.19l-0.92 -1.36L730.44 937.00v0.00 2.73l-3.70 2.28l-1.85 -1.37l-1.39 2.73l1.39 2.73l2.77 1.82l-0.92 1.82l-1.39 -0.46l-1.85 4.10h-2.31 0.00v0.00 3.19l-2.77 0.91v0.00 5.01l-2.31 0.91l-3.70 -0.46v0.00 -4.10l-2.77 -2.27l3.70 -0.46l1.39 -9.56l-3.70 -4.10l2.77 -0.46l0.46 -3.19l-4.16 -2.73l-1.85 -0.46l-0.92 1.82l-2.77 -3.19h1.39 0.00l0.92 -2.28l-0.46 -2.27l-3.23 0.46l-3.70 -4.10l-0.46 -3.64l2.31 -0.46l-0.46 -4.10l-1.85 -2.27l0.46 -2.27l-1.85 -1.82l1.85 -1.82v0.00 -4.10h-3.24 0.00l2.77 -3.19l-2.31 -1.36l1.39 -3.19L697.16 892.86L697.16 892.86z",
+          "id": "63",
+        },
+        "Manikganj": {
+          "name": "Manikganj",
+          "path": "M712.88 1032.57l-7.39 2.28l-4.62 0.46l0.46 4.55l4.16 5.01l5.55 5.01l0.46 2.73l1.85 2.27l-0.46 4.55l5.08 6.83l5.55 3.64l5.55 1.37l2.31 2.73h-5.08 0.00l3.70 3.64l2.31 -1.37l2.31 4.55l8.32 2.27l2.77 -2.27v0.00 -5.01l6.01 -0.91l4.16 -1.82l10.63 1.82l-2.77 -7.74l4.62 -5.01l-9.24 -1.82l-3.23 -4.10l-2.31 -5.01l-3.23 -1.82l-2.31 -5.92l-4.62 -2.28l3.70 -3.19l-8.78 -0.46l-0.92 -3.64l-2.31 -0.91l-4.62 4.55l-1.39 -0.91l-3.23 3.64l-1.39 -2.27l-1.85 4.10l-2.77 -0.91l-2.31 -1.82l-1.39 1.82l-1.85 -2.73L712.88 1032.57L712.88 1032.57z",
+          "id": "47",
+        },
+        "Netrokona": {
+          "name": "Netrokona",
+          "path": "M841.83 962.94l-3.70 -1.36l-0.46 -3.19l-3.23 1.36l-0.92 -4.55l-4.16 -2.27l-2.31 -3.19l-0.46 -4.55l3.23 -3.19l-4.16 -2.27v0.00 -2.73l1.85 0.46l1.85 -2.73l-5.08 -1.82l-0.92 1.82h-4.62 0.00l-3.23 -3.19h-4.16 0.00l1.85 -2.27l-1.85 -1.82v0.00 -4.55l-3.23 -0.46l-1.85 -5.01h-1.39 0.00l0.46 -1.82l-0.46 -4.10l-4.16 -2.73h5.08 0.00l0.92 -2.28l1.85 5.46h2.31 0.00l0.92 -4.09l1.39 -2.28h2.31 0.00l1.85 -3.64l-4.16 -4.09l2.77 -1.37l-0.93 -2.73l1.85 -3.19l2.31 -5.46l3.70 0.46l1.39 1.37l7.86 -5.01l2.77 4.10l12.02 0.46l1.39 -1.36l3.70 1.82l6.01 -5.01l0.46 2.27l-1.39 0.46l-0.46 8.65l1.85 1.82l-0.93 0.91l-2.77 0.46l-0.93 2.28l3.70 0.91l-1.85 2.28l-0.46 4.55l2.31 4.10v0.00 6.37l5.55 1.36l3.70 3.64l8.78 0.46l2.31 3.64v0.00 4.10l1.85 3.64l1.85 -3.64l2.31 -0.46l1.85 3.19l-1.39 3.64l-3.23 0.91v0.00 4.55l2.31 1.36l2.77 0.46l3.70 1.36l1.85 2.28l1.39 1.82l-2.77 3.19l-3.70 2.73l-5.08 0.46l-7.86 5.01l-1.39 -2.28l-5.55 -1.36l-4.16 2.73l-3.23 -0.46l-6.47 0.46h-5.55 0.00L841.83 962.94L841.83 962.94z",
+          "id": "64",
+        },
+        "Dhaka": {
+          "name": "Dhaka",
+          "path": "M742.92 1083.08l2.31 -2.73v0.00 -4.55l7.86 -0.91l2.77 -1.82l10.17 2.28l-2.31 -8.19l4.62 -4.10l-7.86 -2.27l-2.31 -0.46l-4.62 -8.65l-3.70 -1.82l-1.39 -5.92l-5.08 -3.19l3.70 -2.73l-7.86 -0.91l0.46 -2.27v0.00 -2.73l3.70 2.73l4.16 -3.19l5.55 2.73l4.16 -1.82l2.77 4.55l3.70 -1.82l3.70 -0.91l1.39 2.27l2.31 -6.83l4.16 6.37l-3.70 3.19l3.23 0.91l6.93 0.91l0.46 8.65l3.70 -0.91l2.31 2.27h3.23 0.00l2.31 -1.82h2.31 0.00l0.46 3.64v0.00 3.19l-0.92 2.73l4.16 11.83l1.85 1.82l-1.85 0.91l-7.86 3.64l3.23 5.46l-1.39 5.01l-4.16 -3.64l-1.39 2.27l-1.39 5.92l-3.23 -0.91l1.85 -5.46l-4.16 -2.27l-2.31 -2.73l-6.93 -1.37l-2.77 4.10l-0.46 2.28l-0.46 6.37l-2.31 2.73l-3.23 -1.82l-0.46 3.64l-1.39 2.28l-4.62 -2.28l-0.46 -4.09l-1.39 -4.55l-3.70 -2.27L742.92 1083.08L742.92 1083.08z",
+          "id": "41",
+        },
+        "Munshiganj": {
+          "name": "Munshiganj",
+          "path": "M760.45 1100.32l1.96 -7.08l3.92 1.93l2.61 -3.22v0.00 -5.79l3.27 -7.08l6.54 1.93l6.54 4.51l-1.96 6.44l3.92 0.65l1.96 -7.08l7.84 5.15l6.54 1.29l1.31 3.22l2.61 1.93v0.00 4.50l-0.65 3.86l-3.27 5.15l-1.31 5.15l-4.58 -5.15h-8.50 0.00l-6.54 -1.93h-5.23 0.00l-5.88 -1.29L760.45 1100.32L760.45 1100.32 z",
+          "id": "45",
+        },
+        "Rajbari": {
+          "name": "Rajbari",
+          "path": "M658.34 1059.42v0.00 -5.92l-2.31 -1.82l2.77 -1.36l6.47 0.46l3.70 0.46l2.31 2.73v0.00 3.19l0.92 3.19l6.93 4.09l-1.85 -5.01l3.70 -0.46l0.92 2.27l2.31 1.36l6.47 -4.10l2.31 1.36l-0.46 2.28l2.31 2.73v0.00 -3.64l10.17 -0.46l5.08 0.91l3.23 4.10l0.46 5.00l-4.16 -3.19l-3.23 -4.10h-11.09 0.00l-0.46 1.82h9.24 0.00l4.62 3.19l6.01 4.55l2.31 1.82l1.85 0.91l-2.31 0.91l-0.46 2.27h-4.62 0.00l-0.46 2.27l-3.23 -0.91v0.00 6.37l3.70 2.27l-0.92 2.27h-3.23 0.00l-0.92 -2.27l-0.92 2.27l-4.62 -0.46l-0.92 -5.46l-5.55 5.01h-2.31 0.00l-0.92 -4.10h-1.85 0.00l-0.93 1.82l-4.62 -2.27l-0.92 1.82l2.77 1.82l-2.77 1.36l-1.85 -0.46v0.00 -2.27l-3.70 -0.46l-1.85 -5.01l-4.62 -3.19l-0.46 -2.73l-6.47 -0.46l-0.92 1.36l-5.55 -5.01l-0.92 -2.73l-1.39 -2.73l3.23 -3.19z",
+          "id": "46",
+        },
+        "Madaripur": {
+          "name": "Madaripur",
+          "path": "M754.94 1106.29l6.01 0.46l3.70 3.19l4.16 1.82l9.24 2.73l-1.85 3.19l-6.47 10.47l-6.01 4.10l1.39 8.19l5.55 4.10l2.77 6.37l4.62 3.19l-5.08 6.83l3.70 3.19l1.39 2.73l-2.31 1.82h-5.08 0.00l-5.54 -1.36l0.46 -5.92l0.46 -5.46l-2.31 -0.91l-1.39 2.28h-6.01 0.00l-3.70 -2.28v0.00 -1.82l2.31 -0.91l-4.16 -2.73l-3.70 3.19l-4.62 -3.64h-2.77 0.00l-2.77 3.64l-4.16 -2.73l2.77 -6.83l5.55 0.46l-0.93 -2.73l4.16 -2.27l1.39 -5.92l-2.31 -4.10l2.31 -4.55l6.47 2.73l2.31 -9.56l-1.85 -3.64l2.31 -1.82z",
+          "id": "48",
+        },
+        "Gopalganj": {
+          "name": "Gopalganj",
+          "path": "M714.70 1168.22l0.33 -1.93l-4.58 -2.57l-2.29 -5.79l-6.54 -6.44l4.58 0.32l2.61 -6.44l0.65 -3.54l-3.27 -1.29l-3.92 2.90l-0.65 -0.64l0.98 -2.90v0.00 -1.61h1.96 0.00l5.88 -3.86l0.65 -2.90l-3.27 -1.93l0.65 -2.25l6.21 0.32l6.21 -5.15l2.94 0.32l2.29 1.93l1.96 -1.61l2.29 0.32l0.65 3.54l2.94 -1.93l3.60 -0.32l-1.96 -3.54l1.96 0.32l2.62 3.86h1.63 0.00l0.98 2.57h1.31 0.00l1.31 4.83l-1.63 5.47l-4.25 2.25c0.00 0.00 1.31 2.90 0.00 2.90s-4.25 0.00 -4.25 0.00l-1.96 7.08l3.92 2.25l1.63 -2.90l2.29 -1.29l4.25 2.57l1.63 1.61l3.60 -3.22l4.25 2.25l-1.63 1.29l-0.33 3.22l4.25 1.29l-1.63 0.65v0.00 4.18h-3.60 0.00l-1.31 2.90l-3.92 1.61v0.00 2.90l-1.31 0.32v0.00 1.61l-2.62 1.93l-1.31 5.15l-1.31 1.93l-0.33 1.29l-3.27 0.65h-4.58 0.00l-0.65 3.54h-0.98 0.00l-3.60 -2.25l-5.23 0.32l-4.58 -2.57l-0.65 -2.25l2.94 -2.58l-4.90 -3.22L714.70 1168.22L714.70 1168.22z",
+          "id": "49",
+        },
+        "Faridpur": {
+          "name": "Faridpur",
+          "path": "M677.44 1087.45l2.94 0.64l0.33 2.25l1.96 0.96l2.94 -1.61l-3.27 -1.93l1.31 -1.61l4.90 1.93l0.65 -1.93l1.63 0.32l0.98 3.86l2.62 0.32l5.23 -5.15l0.98 5.47l4.58 0.64l0.98 -2.57l1.31 2.25l2.94 0.32l1.31 -2.25l-3.92 -1.93v0.00 -7.40l3.27 1.29l0.65 -2.25h4.58 0.00l0.33 -2.25h0.98 0.00l2.61 0.64l0.98 2.57l9.48 1.93l3.27 3.86h2.61 0.00l1.63 3.86l10.13 1.61l5.88 4.18l2.94 5.15l0.33 6.11h-2.62 0.00l-0.33 4.83l-2.61 2.25l3.60 2.25l-1.63 4.18l-1.96 6.11l-2.29 -0.96l-3.60 -2.25l-1.63 4.50l-1.63 -0.32l-0.33 -2.25h-1.96 0.00l-2.29 -3.54l-2.94 -0.32l2.29 2.90l-2.61 0.32l-3.60 2.25l-0.33 -3.54h-2.94 0.00l-1.96 1.61l-1.63 -2.57l-2.94 -0.32l-5.55 5.47l-7.52 0.32l-0.65 1.93l2.94 1.61l-0.33 1.61l-0.98 1.61l-4.25 3.54h-3.27 0.00l-1.63 -1.93h-4.90 0.00l-1.63 -2.90l3.27 -3.54l-4.25 -0.96l-0.98 -3.54v0.00 -6.11l-2.29 -1.61l1.96 -1.93l5.23 3.86l-1.96 -3.54l-3.60 -5.47l0.33 -4.50h-0.98 0.00l-1.63 -2.90l-2.62 -2.25l-7.84 -0.32l-0.33 -1.29l1.96 -1.61h2.29 0.00l0.33 -1.29l-3.60 -3.22L677.44 1087.45L677.44 1087.45z",
+          "id": "50",
+        },
+        "Borguna": {
+          "name": "Borguna",
+          "path": "M762.41 1229.04l6.54 0.64l-0.65 3.22l6.54 -1.93v0.00 -1.29l3.92 -2.57l4.58 1.93l-1.31 5.15l-4.58 0.64l-4.58 6.44l1.96 5.15l-1.31 3.86l-6.54 1.29l-2.62 4.51l-0.65 5.15l1.96 2.57l5.88 -5.79l3.27 -1.29l2.61 1.29l11.11 0.65l0.65 4.50l-6.54 6.44l-1.96 3.86l4.58 2.57v0.00 3.86l-4.58 7.72l-3.92 4.50v0.00 9.65l-6.54 7.72l0.65 7.08l-5.88 1.93l-5.23 3.22l-5.88 -1.29l-4.58 -3.86l-8.50 -1.93l1.96 -3.22l-2.61 -3.22c0.00 0.00 -2.61 -7.08 0.65 -7.08s7.84 -2.57 7.84 -2.57l-4.58 -1.93l-4.58 -0.65l0.65 -6.44l3.27 -3.86l-1.96 -3.22l-1.96 4.50l-3.27 0.65l-0.65 4.50l1.96 1.93l-3.27 3.86l-5.23 -8.37l-1.31 -6.44v0.00 -9.01l0.00 0.00l6.54 -3.22l3.27 -3.86l2.61 1.29l4.58 -9.65l1.96 -5.15l-1.31 -5.79l6.54 0.64l4.58 -5.79l3.92 -2.57l0.65 -5.15L762.41 1229.04L762.41 1229.04z",
+          "id": "30",
+        },
+        "Lakshmipur": {
+          "name": "Lakshmipur",
+          "path": "M816.41 1164.54l1.39 4.55l6.01 2.27l0.92 3.64l1.85 3.64l6.01 5.01l2.31 8.65l4.16 9.56l1.85 7.28l8.32 8.19l2.77 5.01l6.47 2.28l7.40 -5.46l-1.39 -6.37l-5.08 -8.19l0.46 -2.73l-7.40 -10.92l-0.46 -7.28l4.62 -2.27l1.39 -5.46v0.00 -7.74l-4.62 -3.19l-5.55 -2.27l-0.46 -1.82l3.70 -1.37l-1.85 -3.19l2.31 0.46l4.62 -10.47l-2.77 -1.36h-4.62 0.00l-1.85 -3.64l-5.08 0.91l-2.77 9.10l-7.40 2.27l-0.92 -0.91l-6.01 3.19l-1.85 -2.73h-1.39 0.00l-1.39 1.36v0.00 8.65L816.41 1164.54L816.41 1164.54z",
+          "id": "3",
+        },
+        "Chattogram": {
+          "name": "Chattogram",
+          "path": "M955.88 1265.73l-3.92 -2.57l-1.31 -7.72l-0.65 -7.08v0.00 -2.57l-4.58 -7.08l-3.27 -9.01l-5.23 -4.50l-3.92 -5.79l-2.61 -5.15v0.00 -1.93l-2.61 -3.22l-3.27 -2.57l-9.80 -7.08l1.96 -3.22l-4.58 -4.51l0.65 -3.86l1.96 -7.72l6.54 -2.58h2.62 0.00l0.65 -6.44h5.23 0.00l4.58 1.29l2.62 -3.22l7.84 -1.93l3.92 1.93l1.31 3.86l-2.61 4.50l3.27 4.51l3.27 6.44l3.27 5.79l2.61 4.50v0.00 -5.15h5.23 0.00l2.61 1.93v0.00 5.79l4.58 0.64l1.31 6.44l0.65 7.08l1.96 5.15l-0.65 4.50l4.58 3.22l1.31 -3.22l0.65 -3.22l-1.96 -2.58l0.65 -5.79l5.23 -1.93l5.23 5.79l4.58 10.94l1.31 7.72l-4.58 8.37l7.19 5.15l-1.31 5.15l-0.65 3.22l1.96 7.72l0.65 3.22v0.00 3.22l1.96 3.22l-1.31 3.86l1.31 6.44l3.92 7.72l-1.96 3.86l-1.96 2.57l1.96 4.51l-4.57 1.29l-3.92 -1.29l1.31 -3.86h-5.88 0.00l-3.92 3.86l-7.19 1.29l-3.92 3.86l-6.54 3.86l-1.31 -5.15l3.27 -4.51l-5.23 -4.50v0.00 -5.79l-3.92 -5.15l-1.31 -9.01l-3.27 -3.22L955.88 1265.73L955.88 1265.73z",
+          "id": "4",
+        },
+        "Cox_s_Bazar": {
+          "name": "Cox_s_Bazar",
+          "path": "M968.47 1313.81l10.17 -5.46l4.62 -3.64l4.62 -0.91l6.47 10.92l7.39 3.64l2.77 -0.91l1.85 -4.55l4.62 6.37v0.00 2.73h-4.62 0.00l-0.92 6.37h-8.32 0.00l-3.70 4.55l3.70 9.10l7.39 7.28l-2.77 4.55l4.62 7.28l3.70 4.55l-1.85 6.37h-3.70 0.00l-0.93 -3.64l-6.47 7.28l1.85 8.19l5.90 6.74l0.92 4.53l-4.42 5.29l4.05 7.28l6.84 8.56l-4.04 5.09l4.60 7.28l1.90 5.79l-1.78 3.60l2.66 5.91l3.70 9.10l-0.92 4.55l-2.77 -2.73l-3.70 -10.01l-4.62 -5.46l-3.70 -6.37l-2.77 -6.37v0.00 -5.46l-15.71 -18.20l-1.85 -14.56v0.00 -6.37l-2.77 -6.37l-5.55 -7.28l-0.93 -3.64l4.62 -5.46l0.92 -6.37l1.85 -5.46l1.85 -8.19l-0.93 -10.01l-3.70 8.19l-4.62 -2.73l3.70 6.37l2.77 7.28l-4.62 9.10l0.93 0.91l-9.24 -0.91l0.93 4.55h-5.55 0.00l-0.92 -4.55l2.77 -8.19l1.85 -7.28l-4.62 -3.64L968.47 1313.81L968.47 1313.81z",
+          "id": "5",
+        },
+        "Khagrachari": {
+          "name": "Khagrachari",
+          "path": "M973.09 1205.50l6.47 -8.19v0.00 -6.37l2.77 -9.10l12.94 -9.10l-3.70 -17.29l9.24 -4.55l-1.85 -8.19l-4.62 -11.83l1.85 -7.28l-6.47 -6.37l9.24 -10.92l-11.09 -24.57l-5.55 0.91l-6.47 -10.92h-2.77 0.00l-3.70 3.64l3.70 15.47l1.85 10.01l-2.77 3.64v0.00 5.46l-5.55 -1.82l-6.47 5.46l-6.47 10.92l-2.77 8.19l4.62 8.19l0.81 11.51l-1.14 2.94l-3.37 0.11v0.00 2.73l-7.40 9.10l5.55 4.55l-1.85 3.64l0.92 3.64l5.55 11.83l5.55 7.28l0.93 -3.64l6.47 0.91l0.92 5.46L973.09 1205.50L973.09 1205.50z",
+          "id": "6",
+        },
+        "Bagerhat": {
+          "name": "Bagerhat",
+          "path": "M709.47 1169.83l5.23 -1.93l-0.65 5.79l5.23 1.93l-3.27 3.22l0.65 3.22l4.58 3.22l5.88 -1.93l3.92 4.50l0.65 9.01l-4.58 1.93l-2.61 1.29l-0.65 4.50h6.54 0.00l1.31 1.29v0.00 7.08l2.62 6.44l-1.96 3.22l2.62 8.37l-5.23 -2.58l-3.92 -1.93l-1.31 1.29l7.19 5.15v0.00 1.93h-1.96 0.00l-3.27 3.86v0.00 8.37l-3.92 6.44l-1.31 3.86l-0.65 7.72l3.92 5.79l1.31 7.08l-5.23 7.08l1.96 4.51l-0.65 8.37l2.62 7.08v0.00 3.86h-2.62 0.00v0.00 3.86l-9.15 5.79l-3.27 -2.57l-7.84 -0.64l-4.58 1.29l8.50 6.44l-1.96 3.86h-7.19 0.00l-5.23 -1.29l3.27 6.44l-4.58 1.29l-5.23 -1.93l1.96 -4.50l-3.92 -5.79v0.00 -5.15l-0.65 -5.15l1.31 -10.30l-1.31 -5.79l3.27 -9.01l0.65 -10.94l-2.61 -9.65l7.84 -6.44l4.58 -3.22l1.31 -10.30l-5.23 -10.30l-1.96 -1.93v0.00 -4.51l-3.27 -6.44l-1.31 -8.37l5.88 -9.65l2.61 -7.72h3.92 0.00l4.58 -5.15v0.00 -4.50l-2.62 -1.93v0.00 -3.86l7.19 0.64l1.96 -5.15L709.47 1169.83L709.47 1169.83z",
+          "id": "27",
+        },
+        "Bandarban": {
+          "name": "Bandarban",
+          "path": "M1005.44 1313.81l-3.70 4.55l-6.47 -2.73l-1.85 -3.64l-5.55 -8.19l2.77 -3.64h4.62 0.00l1.85 3.64l6.47 0.91v0.00 -3.64l2.77 -7.28l-2.77 -4.55l-1.85 -9.10l-0.92 -4.55l-1.85 -9.10l-1.85 -6.37l1.85 -9.10l5.55 1.82l5.55 -2.73h9.24 0.00l5.55 3.64l8.32 4.55l4.62 10.01l4.62 12.74l-1.85 3.64l5.55 11.83l5.55 15.47l0.93 4.55l-0.93 10.01v0.00 6.37l-0.92 7.28l0.92 9.10l2.77 10.01l0.93 10.01l0.92 8.19l4.62 8.19l-4.62 1.82l-4.62 5.46l-2.77 -1.82l-0.93 -4.55l-2.77 -6.37l0.92 -3.64l-2.77 -0.91l-2.77 1.82l-4.62 0.91l-5.55 -1.82l-0.93 -3.64l-3.70 -9.10l-2.77 -1.82l-3.70 4.55l-1.85 3.64l-3.70 -0.91l-4.62 8.19l-2.77 0.91l-2.77 3.64l0.93 7.28l-2.77 6.37l-0.92 -9.10l-2.77 -7.28l-0.92 -3.64l5.55 -6.37l3.70 3.64l2.77 -5.46l-3.70 -7.28l-3.70 -6.37l1.85 -3.64l-4.62 -4.55l-1.85 -5.46l-2.77 -7.28l4.62 -4.55h7.40 0.00v0.00 -5.46h4.62 0.00v0.00 -2.73L1005.44 1313.81L1005.44 1313.81z",
+          "id": "7",
+        },
+        "Jhinaidaha": {
+          "name": "Jhinaidaha",
+          "path": "M589.94 1116.76l5.55 1.37l2.77 -1.82l1.85 2.28l3.70 0.45l0.46 -5.01l3.23 0.46l6.01 -3.64l-0.46 -2.27l-3.70 -2.28l1.85 -0.91l0.93 -6.37l-1.39 -2.27l-2.31 -1.36l2.77 -1.36l5.55 2.27l0.46 -2.27l-1.85 -2.27l-0.46 -1.36h2.77 0.00l3.70 -6.37l-0.46 -7.28l3.23 -1.36l1.39 -3.19h2.31 0.00v0.00 -1.82l-2.31 -2.73l0.46 -1.82l2.77 1.36v0.00 2.28l2.77 0.91l0.46 2.73h1.85 0.00l1.85 -2.73l3.23 1.37l2.31 -3.19h4.16 0.00l1.39 -2.73l5.55 3.88l3.70 0.67l0.46 1.82l6.47 5.46l0.46 2.73l-0.93 1.36h-1.39 0.00l-0.92 1.82l1.39 1.37l0.46 1.82l-1.39 0.46v0.00 2.73l1.85 0.91l-0.46 0.91h-2.31 0.00l-2.31 3.64l0.46 5.01l-0.46 5.01l-1.39 2.27l-1.85 1.82l-2.31 -0.46l-2.77 5.46l-0.46 3.19l1.85 0.46l-1.85 1.36v0.00 2.27l-2.31 2.28l-1.85 -1.82l-0.92 1.36l1.39 3.64l-3.23 1.37l-7.86 1.36l-2.31 -5.46h-3.70 0.00l-1.85 -4.10l2.77 -1.82l-4.62 -1.82l-1.85 -1.36l-1.39 1.36l2.77 3.64h-4.62 0.00l-3.70 1.82l2.77 2.73l2.77 1.36l-3.70 0.46l-6.01 -1.82l-1.39 0.46l2.77 1.82l-1.39 3.19l-1.39 2.27l-0.46 2.27h-7.86 0.00l-4.62 -2.27v0.00 3.19l-4.62 -0.46l-0.92 -2.27l-3.70 -0.46l-2.31 -1.36v0.00 -2.27l-2.77 -1.82v0.00 -2.27l0.92 -1.82l3.70 -0.91l-0.46 -2.27L589.94 1116.76L589.94 1116.76z",
+          "id": "28",
+        },
+        "Kurigram": {
+          "name": "Kurigram",
+          "path": "M680.99 821.41v0.00 -3.19l-4.16 -3.64l4.16 -0.46l-2.77 -2.73h-3.23 0.00l-1.39 -4.10l3.23 -2.73v0.00 3.19l2.31 1.82l4.16 -3.64l0.46 -5.92l6.01 -5.01l-0.46 -1.82l-4.16 -0.46v0.00 -3.19l-1.85 1.36l-4.62 -6.37h-3.70 0.00l1.39 -8.19h6.47 0.00l0.92 1.82l-0.46 2.27l2.77 2.73l0.93 -1.82l2.31 -0.91v0.00 -2.27l-2.31 -0.46l-0.46 -4.10l5.08 -3.64h4.16 0.00v0.00 -2.28l-1.39 -0.91l-0.46 -3.64l-1.39 0.46l-0.92 1.82l-0.93 1.36l-1.85 -0.91l1.85 -3.19l-0.92 -1.82l-0.92 -1.82v0.00 -2.28h1.85 0.00l2.77 -3.19l0.92 -2.27l-0.46 -2.73l1.39 -1.36h4.16 0.00l2.77 2.28l-1.85 1.82l-0.46 2.27l-0.46 0.91l1.39 2.73l1.85 -1.36h5.08 0.00l1.39 4.10l4.62 7.74l-1.85 0.91v0.00 2.73l2.77 0.91l2.31 6.83h4.62 0.00l-4.62 4.10l4.62 1.36l3.23 1.37v0.00 1.36l-2.31 2.27l-4.16 3.64l0.46 5.01l-2.31 3.19l1.85 3.19l1.85 3.19l-2.77 2.73v0.00 2.73l2.31 0.46l-0.92 3.64l4.16 3.19v0.00 11.83l-2.31 4.55l-0.46 7.28l-0.92 4.10l-1.39 1.36l-0.46 5.01l-2.31 -1.36l-3.23 -1.82v0.00 2.73l1.85 1.36l-4.16 3.19l-1.85 -0.46v0.00 -1.82l-0.92 0.91l-3.70 -0.46v0.00 -2.27l1.85 -0.91l-1.85 -0.46v0.00 -2.27l1.39 -3.64l-5.55 -1.36l3.23 -1.36l-1.85 -2.73v0.00 -1.82l-4.16 -3.64h-3.23 0.00l-0.92 2.27l-1.39 -3.64l-5.54 -2.73l-1.85 -5.00l-2.31 2.28z",
+          "id": "60",
+        },
+
+
+      },
+      "width": 1530.748,
+      "height": 2138,
+    }
+    );
+  </script>
+  <script>
+    $(function () {
+      var selectedDistrict = "";
+      var disrticts = {
+        'Comilla': 'কুমিল্লা',
+        'Jessore': 'যশোর ',
+        'Shatkhira': 'সাতক্ষীরা ',
+        'Narsingdi': 'নরসিংদী ',
+        'Jhalokati': 'ঝালকাঠি ',
+        'Sylhet': 'সিলেট',
+        'Maulvibazar': 'মৌলভীবাজার ',
+        'Panchagarh': 'পঞ্চগড় ',
+        'Gazipur': 'গাজীপুর ',
+        'Sirajganj': 'সিরাজগঞ্জ ',
+        'Meherpur': 'মেহেরপুর ',
+        'Feni': 'ফেনী ',
+        'Pabna': 'পাবনা ',
+        'Shariatpur': 'শরীয়তপুর  ',
+        'Bogura': 'বগুড়া ',
+        'Dinajpur': 'দিনাজপুর ',
+        'Narail': 'নড়াইল ',
+        'Patuakhali': 'পটুয়াখালী ',
+        'Pirojpur': 'পিরোজপুর ',
+        'Brahmanbaria': 'ব্রাহ্মণবাড়িয়া ',
+        'Barisal': 'বরিশাল ',
+        'Habiganj': 'হবিগঞ্জ ',
+        'Rangamati': 'রাঙ্গামাটি ',
+        'Rajshahi': 'রাজশাহী ',
+        'Noakhali': 'নোয়াখালী ',
+        'Narayanganj': 'নারায়ণগঞ্জ ',
+        'Sunamganj': 'সুনামগঞ্জ ',
+        'Chuadanga': 'চুয়াডাঙ্গা ',
+        'Kushtia': 'কুষ্টিয়া ',
+        'Magura': 'মাগুরা ',
+        'Natore': 'নাটোর ',
+        'Lalmonirhat': 'লালমনিরহাট ',
+        'Nilphamari': 'নীলফামারী ',
+        'Gaibandha': 'গাইবান্ধা ',
+        'Jaipurhat': 'জয়পুরহাট ',
+        'Bhola': 'ভোলা ',
+        'ChapaiNawabganj': 'চাঁপাইনবাবগঞ্জ ',
+        'Thakurgaon': 'ঠাকুরগাঁও ',
+        'Sherpur': 'শেরপুর ',
+        'Tangail': 'টাঙ্গাইল ',
+        'Rangpur': 'রংপুর ',
+        'Naogaon': 'নওগাঁ ',
+        'Mymensingh': 'ময়মনসিংহ ',
+        'Khulna': 'খুলনা ',
+        'Chandpur': 'চাঁদপুর ',
+        'Kishoreganj': 'কিশোরগঞ্জ ',
+        'Jamalpur': 'জামালপুর ',
+        'Manikganj': 'মানিকগঞ্জ ',
+        'Netrokona': 'নেত্রকোণা ',
+        'Dhaka': 'ঢাকা ',
+        'Munshiganj': 'মুন্সিগঞ্জ ',
+        'Rajbari': 'রাজবাড়ী ',
+        'Madaripur': 'মাদারীপুর ',
+        'Gopalganj': 'গোপালগঞ্জ ',
+        'Faridpur': 'ফরিদপুর ',
+        'Borguna': 'বরগুনা ',
+        'Lakshmipur': 'লক্ষ্মীপুর  ',
+        'Chattogram': 'চট্টগ্রাম ',
+        'Cox_s_Bazar': 'কক্সবাজার ',
+        'Khagrachari': 'খাগড়াছড়ি ',
+        'Bagerhat': 'বাগেরহাট ',
+        'Bandarban': 'বান্দরবান ',
+        'Jhinaidaha': 'ঝিনাইদহ ',
+        'Kurigram': 'কুড়িগ্রাম ',
+      };
+      var trainning_institute = {
+        'Comilla': '10',
+        'Jessore': '5 ',
+        'Shatkhira': '10 ',
+        'Narsingdi': '12 ',
+        'Jhalokati': '15 ',
+        'Sylhet': '18 ',
+        'Maulvibazar': '19 ',
+        'Panchagarh': '10 ',
+        'Gazipur': '20 ',
+        'Sirajganj': '23 ',
+        'Meherpur': '10 ',
+        'Feni': '40 ',
+        'Pabna': '50 ',
+        'Shariatpur': '56  ',
+        'Bogura': '12 ',
+        'Dinajpur': '3 ',
+        'Narail': '2 ',
+        'Patuakhali': '5 ',
+        'Pirojpur': '2 ',
+        'Brahmanbaria': '10 ',
+        'Barisal': '6 ',
+        'Habiganj': '2 ',
+        'Rangamati': '1 ',
+        'Rajshahi': '2 ',
+        'Noakhali': '3 ',
+        'Narayanganj': '4 ',
+        'Sunamganj': '5 ',
+        'Chuadanga': '2 ',
+        'Kushtia': '1 ',
+        'Magura': '2 ',
+        'Natore': '2 ',
+        'Lalmonirhat': '2 ',
+        'Nilphamari': '5 ',
+        'Gaibandha': '2 ',
+        'Jaipurhat': '5 ',
+        'Bhola': '10 ',
+        'ChapaiNawabganj': '5 ',
+        'Thakurgaon': '5',
+        'Sherpur': '10',
+        'Tangail': '3',
+        'Rangpur': '5 ',
+        'Naogaon': '5 ',
+        'Mymensingh': '10 ',
+        'Khulna': '3 ',
+        'Chandpur': '5 ',
+        'Kishoreganj': '5 ',
+        'Jamalpur': '3 ',
+        'Manikganj': '10 ',
+        'Netrokona': '5 ',
+        'Dhaka': '5 ',
+        'Munshiganj': '6 ',
+        'Rajbari': '7 ',
+        'Madaripur': '8 ',
+        'Gopalganj': '8 ',
+        'Faridpur': '9 ',
+        'Borguna': '10 ',
+        'Lakshmipur': '10  ',
+        'Chattogram': '5 ',
+        'Cox_s_Bazar': '5 ',
+        'Khagrachari': '2 ',
+        'Bagerhat': '8 ',
+        'Bandarban': '3 ',
+        'Jhinaidaha': '2 ',
+        'Kurigram': '2 ',
+      };
+      // put all district real db id 
+      var district_code = {
+        'Comilla': '10',
+        'Jessore': '5 ',
+        'Shatkhira': '10 ',
+        'Narsingdi': '12 ',
+        'Jhalokati': '15 ',
+        'Sylhet': 'hello nadim ',
+        'Maulvibazar': '19 ',
+        'Panchagarh': '10 ',
+        'Gazipur': '20 ',
+        'Sirajganj': '23 ',
+        'Meherpur': '10 ',
+        'Feni': '40 ',
+        'Pabna': '50 ',
+        'Shariatpur': '56  ',
+        'Bogura': '12 ',
+        'Dinajpur': '3 ',
+        'Narail': '2 ',
+        'Patuakhali': '5 ',
+        'Pirojpur': '2 ',
+        'Brahmanbaria': '10 ',
+        'Barisal': '6 ',
+        'Habiganj': '2 ',
+        'Rangamati': '1 ',
+        'Rajshahi': '2 ',
+        'Noakhali': '3 ',
+        'Narayanganj': '4 ',
+        'Sunamganj': '5 ',
+        'Chuadanga': '2 ',
+        'Kushtia': '1 ',
+        'Magura': '2 ',
+        'Natore': '2 ',
+        'Lalmonirhat': '2 ',
+        'Nilphamari': '5 ',
+        'Gaibandha': '2 ',
+        'Jaipurhat': '5 ',
+        'Bhola': '10 ',
+        'ChapaiNawabganj': '5 ',
+        'Thakurgaon': '5',
+        'Sherpur': '10',
+        'Tangail': '3',
+        'Rangpur': '5 ',
+        'Naogaon': '5 ',
+        'Mymensingh': '10 ',
+        'Khulna': '3 ',
+        'Chandpur': '5 ',
+        'Kishoreganj': '5 ',
+        'Jamalpur': '3 ',
+        'Manikganj': '10 ',
+        'Netrokona': '5 ',
+        'Dhaka': '5 ',
+        'Munshiganj': '6 ',
+        'Rajbari': '7 ',
+        'Madaripur': '8 ',
+        'Gopalganj': '8 ',
+        'Faridpur': '9 ',
+        'Borguna': '10 ',
+        'Lakshmipur': '10  ',
+        'Chattogram': '5 ',
+        'Cox_s_Bazar': '5 ',
+        'Khagrachari': '2 ',
+        'Bagerhat': '8 ',
+        'Bandarban': '3 ',
+        'Jhinaidaha': '2 ',
+        'Kurigram': '2 ',
+      };
+      var map = new jvm.Map({
+        container: $('.map'),
+        map: 'bangladesh',
+        backgroundColor: '#ffffff',
+        borderColor: '#F6924D',
+        borderOpacity: 0.25,
+        borderWidth: 1,
+        regionsSelectable: true,
+        zoomButtons: true,
+        focusOn: {
+          x: 0.5,
+          y: 0.5,
+          scale: 2.6
+        },
+        labels: {
+          regions: {
+            render: function (code) {
+              return disrticts[code];
+            },
+            offsets: function (code) {
+            }
+          }
+        },
+        series: {
+          regions: [{
+            scale: {
+              'রংপুর অঞ্চল': '#F2969F',
+              'দিনাজপুর অঞ্চল': '#008745',
+              'বগুড়া অঞ্চল': '#FCB415',
+              'রাজশাহী অঞ্চল': '#F47721',
+              'যশোর অঞ্চল': '#EE1E3A',
+              'খুলনা অঞ্চল': '#A2DCE9',
+              'বরিশাল অঞ্চল': '#25AEB3',
+              'ফরিদপুর অঞ্চল': '#F58037',
+              'ঢাকা অঞ্চল': '#8EA55E',
+              'ময়মনসিংহ অঞ্চল': '#F15E67',
+              'সিলেট অঞ্চল': '#BCAB52',
+              'কুমিল্লা অঞ্চল': '#BED7F0',
+              'চট্টগ্রাম অঞ্চল': '#FDE114',
+              'রাঙ্গামাটি অঞ্চল': '#4FB99E',
+            },
+            attribute: 'fill',
+            values: {
+              "Lalmonirhat": 'রংপুর অঞ্চল',
+              "Nilphamari": 'রংপুর অঞ্চল',
+              "Gaibandha": 'রংপুর অঞ্চল',
+              "Rangpur": 'রংপুর অঞ্চল',
+              "Kurigram": 'রংপুর অঞ্চল',
+
+              "Panchagarh": 'দিনাজপুর অঞ্চল',
+              "Dinajpur": 'দিনাজপুর অঞ্চল',
+              "Thakurgaon": 'দিনাজপুর অঞ্চল',
+
+              "Sirajganj": 'বগুড়া অঞ্চল',
+              "Pabna": 'বগুড়া অঞ্চল',
+              "Bogura": 'বগুড়া অঞ্চল',
+              "Jaipurhat": 'বগুড়া অঞ্চল',
+
+              "Rajshahi": 'রাজশাহী অঞ্চল',
+              "Natore": 'রাজশাহী অঞ্চল',
+              "ChapaiNawabganj": 'রাজশাহী অঞ্চল',
+              "Naogaon": 'রাজশাহী অঞ্চল',
+
+              "Jessore": 'যশোর অঞ্চল',
+              "Meherpur": 'যশোর অঞ্চল',
+              "Chuadanga": 'যশোর অঞ্চল',
+              "Kushtia": 'যশোর অঞ্চল',
+              "Magura": 'যশোর অঞ্চল',
+              "Jhinaidaha": 'যশোর অঞ্চল',
+
+              "Shatkhira": 'খুলনা অঞ্চল',
+              "Narail": 'খুলনা অঞ্চল',
+              "Khulna": 'খুলনা অঞ্চল',
+              "Bagerhat": 'খুলনা অঞ্চল',
+
+              "Jhalokati": 'বরিশাল অঞ্চল',
+              "Patuakhali": 'বরিশাল অঞ্চল',
+              "Pirojpur": 'বরিশাল অঞ্চল',
+              "Barisal": 'বরিশাল অঞ্চল',
+              "Bhola": 'বরিশাল অঞ্চল',
+              "Borguna": 'বরিশাল অঞ্চল',
+
+
+              "Shariatpur": 'ফরিদপুর অঞ্চল',
+              "Rajbari": 'ফরিদপুর অঞ্চল',
+              "Madaripur": 'ফরিদপুর অঞ্চল',
+              "Gopalganj": 'ফরিদপুর অঞ্চল',
+              "Faridpur": 'ফরিদপুর অঞ্চল',
+
+              "Narsingdi": 'ঢাকা অঞ্চল',
+              "Gazipur": 'ঢাকা অঞ্চল',
+              "Narayanganj": 'ঢাকা অঞ্চল',
+              "Tangail": 'ঢাকা অঞ্চল',
+              "Kishoreganj": 'ঢাকা অঞ্চল',
+              "Manikganj": 'ঢাকা অঞ্চল',
+              "Dhaka": 'ঢাকা অঞ্চল',
+              "Munshiganj": 'ঢাকা অঞ্চল',
+
+              "Sherpur": 'ময়মনসিংহ অঞ্চল',
+              "Mymensingh": 'ময়মনসিংহ অঞ্চল',
+              "Jamalpur": 'ময়মনসিংহ অঞ্চল',
+              "Netrokona": 'ময়মনসিংহ অঞ্চল',
+
+              "Feni": 'চট্টগ্রাম অঞ্চল',
+              "Noakhali": 'চট্টগ্রাম অঞ্চল',
+              "Lakshmipur": 'চট্টগ্রাম অঞ্চল',
+              "Chattogram": 'চট্টগ্রাম অঞ্চল',
+              "Cox_s_Bazar": 'চট্টগ্রাম অঞ্চল',
+
+              "Rangamati": 'রাঙ্গামাটি অঞ্চল',
+              "Khagrachari": 'রাঙ্গামাটি অঞ্চল',
+              "Bandarban": 'রাঙ্গামাটি অঞ্চল',
+
+              "Comilla": 'কুমিল্লা অঞ্চল',
+              "Brahmanbaria": 'কুমিল্লা অঞ্চল',
+              "Chandpur": 'কুমিল্লা অঞ্চল',
+
+              "Sylhet": 'সিলেট অঞ্চল',
+              "Maulvibazar": 'সিলেট অঞ্চল',
+              "Habiganj": 'সিলেট অঞ্চল',
+              "Sunamganj": 'সিলেট অঞ্চল',
+            },
+            // legend: {
+            //   vertical: true,
+            //   title: 'কৃষি অঞ্চল সমূহ'
+            // }
+          }]
+        },
+        onMarkerTipShow: function (event, tip, index) {
+          tip.html(tip.html());
+
+        },
+        onRegionTipShow: function (event, tip, code) {
+
+          //tip.html(tip.html()+'Test');
+          selectedDistrict = code;
+
+          tip.html(disrticts[code] + 'Trainning Institute:' + trainning_institute[code]);
+
+        },
+        onRegionOver: function (event, code) {
+        },
+        onRegionOut: function (event, code) {
+        },
+        onRegionClick: function (event, code) {
+// drawer off 
+          console.log(district_code[code]);
+          // api call district id pass korben district id er against e institute er all info with association info 
+
+          // response ta amra drawer e pass korbo 
+
+
+          // let url = "http://krishi.gov.bd/regional-page/" + code;
+          // window.open(url, '_blank');
+        },
+        onRegionSelected: function (event, code, isSelected, selectedRegions) {
+          if (window.localStorage) {
+            window.localStorage.setItem(
+              'jvectormap-selected-regions',
+              JSON.stringify(selectedRegions)
+            );
+          }
+        },
+        onViewportChange: function (e, scale, transX, transY) {
+        },
+        regionLabelStyle: {
+          initial: {
+            'font-family': 'SolaimanLipi',
+            'font-size': '14',
+            cursor: 'default',
+            fill: 'black'
+          },
+        },
+
+      });
+
+      $('.list-markers :checkbox').change(function () {
+        var index = $(this).closest('li').attr('data-marker-index');
+      });
+
+    });
+
+    function showDistrictData(id) {
+      console.log(id);
+      /*
+      $.get( "http://ideabank.localhost/admin/report/summary/district-pilot-summary?district="+id, function( data ) {
+          $( "#modal-content" ).html( data );
+      });
+      //$('.modal').modal('show');
+      //alert(id);
+      jQuery.noConflict();
+      $('#districtModal').modal('show');
+      */
+    }
+
+  </script>
+
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-102999982-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript"
+    src="//platform-api.sharethis.com/js/sharethis.js#property=5ac0d9fe003b52001341b1c4&product=sticky-share-buttons"></script>
+</body>
